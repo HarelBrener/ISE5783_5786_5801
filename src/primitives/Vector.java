@@ -3,17 +3,13 @@ package primitives;
 import java.awt.* ;
 
 public class Vector extends Point {
-    Point V;
 
-    public Vector(Point v) {
-        V = v;
+    Vector(Double3 p) {
+        super(p);
     }
 
-    public Vector getV() {
-        return (Vector)V;
+    public Vector(double a, double b, double c) {
+        super(a,b,c);
     }
 
-    public void setP(Vector p) {
-        V = p;
-    }
 }
