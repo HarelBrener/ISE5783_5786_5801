@@ -16,7 +16,7 @@ public class Vector extends Point {
      */
     Vector(Double3 p) {
         super(p);
-        if (this.equals(p.ZERO)) {
+        if (xyz.equals(p.ZERO)) {
             throw new IllegalArgumentException("The vector is the zero vector");
         }
     }
@@ -32,7 +32,7 @@ public class Vector extends Point {
      */
     public Vector(double a, double b, double c) {
         super(a, b, c);
-        if (this.equals(Double3.ZERO)) {
+        if (xyz.equals(Double3.ZERO)) {
             throw new IllegalArgumentException("The vector is the zero vector");
         }
     }
@@ -118,5 +118,15 @@ public class Vector extends Point {
         // with the vector itself and create a new vector that is the normalized version
         Double3 res = this.xyz.reduce(this.length());
         return new Vector(res);
+    }
+    /**
+     * compares between the vectors and returns the answer
+     * @param  o the object to compare
+     * */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Vector vector)) return false;
+        return this.xyz.equals(((Vector) o).xyz);
     }
 }

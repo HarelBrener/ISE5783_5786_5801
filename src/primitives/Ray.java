@@ -38,4 +38,15 @@ public class Ray {
     public Vector getDir() {
         return dir;
     }
+
+    /**
+     * compares between the rays and returns the answer
+     * @param  o the object to compare
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Ray ray)) return false;
+        return this.p0.equals(((Ray) o).p0) && this.dir.equals(((Ray) o).dir) ;
+    }
 }
