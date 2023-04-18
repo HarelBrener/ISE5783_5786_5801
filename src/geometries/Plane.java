@@ -28,7 +28,15 @@ public class Plane implements Geometry{
      * @param p3 the third point on the plane
      */
     public Plane (Point p1, Point p2, Point p3){
-        normal = null;
+        if (p1.equals(p2) || p1.equals(p3) || p2.equals(p3)){ // check if two points are equal
+            throw new IllegalArgumentException("ERROR: at least two from the points are the same");
+        }
+        Vector v1 = (p1.subtract(p2)).normalize();
+        Vector v2 = (p2.subtract(p3)).normalize();
+        if (v1.equals(v2) || (v1.scale(-1)).equals(v2)){ // check if all the points on the same line
+            throw new IllegalArgumentException("ERROR: all the points are on the same line");
+        }
+        normal = (v1.crossProduct(v2)).normalize();
         q0 = p1;
     }
 
@@ -59,12 +67,4 @@ public class Plane implements Geometry{
         return normal;
     }
 
-    /**
-     * Returns the normal vector of the plane.
-     * This method is provided for convenience.
-     * @return the normal vector of the plane
-     */
-    public Vector getNoraml(){
-        return normal;
-    }
 }

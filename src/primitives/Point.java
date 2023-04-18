@@ -2,6 +2,9 @@ package primitives;
 
 import java.util.Objects;
 
+/**
+ * Represents a point in a 3D space by three coordinates.
+ */
 public class Point {
 
     // The coordinates of the point
@@ -50,26 +53,24 @@ public class Point {
     }
 
     /**
-     * Computes the square of the distance between two points.
+     * Computes the square of the distance between accepted point and the exited point.
      *
-     * @param p1 the first point
-     * @param p2 the second point
+     * @param p1 the accepted point
      * @return the square of the distance between the two points
      */
-    double distanceSquared(Point p1, Point p2) {
-        Point subP = p1.subtract(p2);
+    double distanceSquared(Point p1) {
+        Point subP = p1.subtract(this);
         return (subP.xyz.d1 * subP.xyz.d1 + subP.xyz.d2 * subP.xyz.d2 + subP.xyz.d3 * subP.xyz.d3);
     }
 
     /**
-     * Computes the distance between two points.
+     * Computes the distance between accepted point and the exited point.
      *
-     * @param p1 the first point
-     * @param p2 the second point
+     * @param p1 the accepted point
      * @return the distance between the two points
      */
-    double distance(Point p1, Point p2) {
-        return Math.sqrt(distanceSquared(p1, p2));
+    double distance(Point p1) {
+        return Math.sqrt(distanceSquared(p1));
     }
 
     /**

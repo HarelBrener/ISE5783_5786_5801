@@ -54,7 +54,7 @@ public class Vector extends Point {
      * @param scl The scalar value to multiply this vector by.
      * @return The scaled vector.
      */
-    Vector scale(double scl) {
+    public Vector scale(double scl) {
         Double3 res = xyz.scale(scl);
         return new Vector(res);
     }
@@ -127,6 +127,6 @@ public class Vector extends Point {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Vector vector)) return false;
-        return this.xyz.equals(((Vector) o).xyz);
+        return super.equals(o);
     }
 }

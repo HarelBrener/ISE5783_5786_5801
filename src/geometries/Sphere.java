@@ -12,19 +12,14 @@ public class Sphere extends RadialGeometry {
     /** The center point of the sphere */
     final Point center;
 
-    /** The radius of the sphere */
-    final double radius;
-
     /**
      * Constructs a sphere with the specified radius and center point.
      * @param r The radius of the sphere.
      * @param center The center point of the sphere.
-     * @param radius The radius of the sphere.
      */
-    public Sphere(double r, Point center, double radius) {
+    public Sphere(double r, Point center) {
         super(r);
         this.center = center;
-        this.radius = radius;
     }
 
     /**
