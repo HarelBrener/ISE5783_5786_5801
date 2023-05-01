@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class GeometriesTest {
 
     /**
-     * Test method for {@link Ge#findIntsersections(Ray)}.
+     * Test method for {@link Geometries#findIntersections(Ray)}.
      */
     @Test
     void findIntersections() {
