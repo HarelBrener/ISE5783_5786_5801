@@ -4,25 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="27/3 update">
-      <change afterPath="$PROJECT_DIR$/unittests/geometries/CylinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unittests/geometries/PlaneTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unittests/geometries/PolygonTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unittests/geometries/SphereTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unittests/geometries/TubeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unittests/primitives/PointTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unittests/primitives/VectorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_03_2023_17_36_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_03_2023_17_36__Changes_.xml" beforeDir="false" />
+    <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="18/4 update">
+      <change afterPath="$PROJECT_DIR$/src/geometries/Geometries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/geometries/Intersectable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unittests/geometries/GeometriesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometries/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Cylinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometries/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Plane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Polygon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Tube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/CylinderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/CylinderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/PlaneTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/PlaneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/PolygonTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/PolygonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/SphereTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/SphereTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/TubeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/TubeTest.java" afterDir="false" />
+    </list>
+    <list id="bb6a1220-e36f-4d5f-b68b-66af20fac200" name="Changes by admin" comment="">
+      <change beforePath="$PROJECT_DIR$/src/geometries/Geometry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Geometry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Plane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometries/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/geometries/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Tube.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primitives/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Vector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/CylinderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/CylinderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/SphereTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/SphereTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/geometries/TriangleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +45,60 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/unittests/geometries/SphereTest.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="6" end1="6" start2="7" end2="8" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="7" end1="8" start2="9" end2="10" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="16" end1="17" start2="18" end2="19" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="22" end1="22" start2="24" end2="106" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/unittests/geometries/CylinderTest.java">
+      <ranges>
+        <range start1="16" end1="17" start2="16" end2="17" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="23" end1="25" start2="23" end2="24" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="27" end1="29" start2="26" end2="27" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="31" end1="31" start2="29" end2="30" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="32" end1="33" start2="31" end2="32" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="34" end1="36" start2="33" end2="34" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="37" end1="39" start2="35" end2="35" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="40" end1="40" start2="36" end2="43" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/geometries/Plane.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="5" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="5" end1="6" start2="7" end2="11" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="15" end1="16" start2="20" end2="22" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="25" end1="25" start2="31" end2="32" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="29" end1="31" start2="36" end2="38" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="35" end1="36" start2="42" end2="43" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="44" end1="44" start2="51" end2="52" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="52" end1="52" start2="60" end2="61" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="61" end1="61" start2="70" end2="71" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="66" end1="66" start2="76" end2="77" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="69" end1="69" start2="80" end2="102" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="70" end1="70" start2="103" end2="104" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/unittests/geometries/TriangleTest.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="6" end1="6" start2="7" end2="8" changelist="bb6a1220-e36f-4d5f-b68b-66af20fac200" />
+        <range start1="16" end1="17" start2="18" end2="19" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="20" end1="22" start2="22" end2="23" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="23" end1="23" start2="24" end2="65" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -91,8 +150,16 @@
       <recent name="primitives" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CylinderTest">
-    <configuration name="CylinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GeometriesTest">
+    <configuration name="All in ISE5783_5876_5801" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5783_5876_5801" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeometriesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5783_5876_5801" />
       <extension name="coverage">
         <pattern>
@@ -101,7 +168,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.CylinderTest" />
+      <option name="MAIN_CLASS_NAME" value="geometries.GeometriesTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,7 +189,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TubeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TriangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5783_5876_5801" />
       <extension name="coverage">
         <pattern>
@@ -131,38 +198,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="geometries" />
-      <option name="MAIN_CLASS_NAME" value="geometries.TubeTest" />
+      <option name="MAIN_CLASS_NAME" value="geometries.TriangleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TriangleTest.getNormal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5783_5876_5801" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="primitives.*" />
+          <option name="PATTERN" value="geometries.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="primitives" />
-      <option name="MAIN_CLASS_NAME" value="primitives.VectorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VectorTest.testConstructor2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5783_5876_5801" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="primitives.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="primitives" />
-      <option name="MAIN_CLASS_NAME" value="primitives.VectorTest" />
-      <option name="METHOD_NAME" value="testConstructor2" />
+      <option name="PACKAGE_NAME" value="geometries" />
+      <option name="MAIN_CLASS_NAME" value="geometries.TriangleTest" />
+      <option name="METHOD_NAME" value="getNormal" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +222,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CylinderTest" />
-        <item itemvalue="JUnit.TubeTest" />
+        <item itemvalue="JUnit.GeometriesTest" />
+        <item itemvalue="JUnit.All in ISE5783_5876_5801" />
+        <item itemvalue="JUnit.TriangleTest" />
+        <item itemvalue="JUnit.TriangleTest.getNormal" />
         <item itemvalue="JUnit.PlaneTest" />
-        <item itemvalue="JUnit.VectorTest" />
-        <item itemvalue="JUnit.VectorTest.testConstructor2" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +274,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1679924274938</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL‎-00006" summary="18/4 update">
+      <created>1681849217398</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL‎-00006" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1681849217398</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,7 +289,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -240,14 +311,29 @@
     <MESSAGE value="20/3 update" />
     <MESSAGE value="21/3 update" />
     <MESSAGE value="27/3 update" />
-    <option name="LAST_COMMIT_MESSAGE" value="27/3 update" />
+    <MESSAGE value="18/4 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="18/4 update" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/unittests/geometries/GeometriesTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="rhs.d1" language="JAVA" />
         <watch expression="rhs.d1" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ISE5783_5786_5801$PlaneTest.ic" NAME="PlaneTest Coverage Results" MODIFIED="1682889908045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>geometries.*</FILTER>
+    </SUITE>
   </component>
 </project>

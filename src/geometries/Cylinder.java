@@ -20,21 +20,28 @@ public class Cylinder extends Tube {
         this.height = height;
     }
 
+    /**
+     * Calculates the normal vector of a point on a cylinder.
+     * If the point is at the top or bottom base of the cylinder, returns the normal vector of the corresponding face.
+     * If the point is on the curved surface of the cone, returns the normal vector of the surface at that point.
+     *
+     * @param p The point to calculate the normal vector at.
+     * @return The normal vector of the point on the cylinder.
+     */
     public Vector getNormal(Point p) {
-        if ((p.equals(axisRay.getP0()))){ // p = P0
-            return ((axisRay.getDir()).scale(-1));
+        if ((p.equals(axisRay.getP0()))) { // if p is equal to the center of the bottom base
+            return ((axisRay.getDir()).scale(-1)); // return the normal vector of the bottom face
         }
-        if (p.equals(((axisRay.getP0()).add((axisRay.getDir()).scale(height))))){ //p = the center of the other base
-            return axisRay.getDir();
+        if (p.equals(((axisRay.getP0()).add((axisRay.getDir()).scale(height))))) { // if p is equal to the center of the top base
+            return axisRay.getDir(); // return the normal vector of the top face
         }
-        if ((p.subtract(axisRay.getP0())).dotProduct(axisRay.getDir()) == 0){ //p-P0 and dir are orthogonal
-            return ((axisRay.getDir()).scale(-1));
+        if ((p.subtract(axisRay.getP0())).dotProduct(axisRay.getDir()) == 0) { // if p is orthogonal to the axisRay at the bottom base
+            return ((axisRay.getDir()).scale(-1)); // return the normal vector of the bottom face
         }
-        if ((p.subtract((axisRay.getP0()).add((axisRay.getDir()).scale(height)))).dotProduct(axisRay.getDir()) == 0){ //(p - the center of the other base) and dir are orthogonal
-            return axisRay.getDir();
+        if ((p.subtract((axisRay.getP0()).add((axisRay.getDir()).scale(height)))).dotProduct(axisRay.getDir()) == 0) { // if p is orthogonal to the axisRay at the top base
+            return axisRay.getDir(); // return the normal vector of the top face
         }
-        double t = ((p.subtract(axisRay.getP0())).dotProduct(axisRay.getDir()));
-        Point o = (axisRay.getP0()).add((axisRay.getDir()).scale(t));
-        return ((p.subtract(o)).normalize());
+        return super.getNormal(p); // if p is on rest of the cylinder, call the Tube's method to calculate the normal vector
     }
+
 }

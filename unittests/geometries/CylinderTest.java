@@ -35,7 +35,12 @@ class CylinderTest {
         // =============== Boundary Values Tests ==================
         //checks weather the getNormal function for Tube works correctly in case that P equals to the second base center
         assertTrue((dir).equals(c.getNormal(new Point(0,0,10))),"ERROR: getNormal(Point) of Cylinder does not work correctly if P is on the second base center");
-
+    }
+    /**
+     * Test method for {@link Cylinder#findIntsersections(Ray)}.
+     */
+    @Test
+    void testFindIntersectionPoints() {
 
     }
 }
