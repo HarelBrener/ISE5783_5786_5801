@@ -1,9 +1,14 @@
 package geometries;
 
 import primitives.Point;
+import primitives.Ray;
+import primitives.Util;
 import primitives.Vector;
 
-public class Plane implements Geometry{
+import java.util.List;
+import primitives.Util.*;
+
+public class Plane implements Geometry {
 
     // The base point of the plane
     final Point q0;

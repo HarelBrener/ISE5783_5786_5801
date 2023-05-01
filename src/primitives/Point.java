@@ -12,11 +12,34 @@ public class Point {
 
     /**
      * Constructs a point with coordinates given by a Double3 object.
-     *
      * @param p the Double3 object representing the coordinates of the point
      */
     Point(Double3 p) {
         xyz = p;
+    }
+
+    /**
+     * Gets the X coordinate of this point.
+     * @return The X coordinate of this point.
+     */
+    public double getX(){
+        return xyz.d1;
+    }
+
+    /**
+     * Gets the Y coordinate of this point.
+     * @return The Y coordinate of this point.
+     */
+    public double getY(){
+        return xyz.d2;
+    }
+
+    /**
+     * Gets the Z coordinate of this point.
+     * @return The Z coordinate of this point.
+     */
+    public double getZ(){
+        return xyz.d3;
     }
 
     /**
