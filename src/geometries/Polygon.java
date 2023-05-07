@@ -78,6 +78,12 @@ public class Polygon implements Geometry {
       }
    }
 
+   /**
+
+    Returns the normal vector to the polygon at the given point.
+    @param point The point to find the normal vector at.
+    @return The normal vector to the polygon at point.
+    */
    @Override
    public Vector getNormal(Point point) { return plane.getNormal(); }
 
