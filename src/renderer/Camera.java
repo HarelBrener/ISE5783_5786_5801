@@ -209,8 +209,10 @@ public class Camera {
     public void renderImage() {
         if (p0 == null || vRight == null || vUp == null || vTo == null || rayTracer == null || imageWriter == null || width == 0 || height == 0 || distance == 0)
             throw new MissingResourceException("at least one field is empty", "Camera", "renderImage");
-        for(int i = 0; i < imageWriter.getNy(); i++)
-            for(int j = 0; j < imageWriter.getNx(); j++){
+        int y = imageWriter.getNy();
+        int x = imageWriter.getNx();
+        for(int i = 0; i < y; i++)
+            for(int j = 0; j < x; j++){
                 imageWriter.writePixel(j,i,castRay(i,j));
             }
     }

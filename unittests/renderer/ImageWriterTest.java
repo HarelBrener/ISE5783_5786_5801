@@ -6,6 +6,9 @@ import primitives.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ImageWriterTest {
+    /**
+     * Test method for {@link ImageWriter#writeToImage()}.
+     */
     @Test
     void writeImageTest(){
         ImageWriter imageWriter = new ImageWriter("image",800,500);
