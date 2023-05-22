@@ -3,9 +3,8 @@ package primitives;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static primitives.Util.isZero;
 
-class VectorTest {
+class VectorTests {
     /**
      * Test method for {@link primitives.Vector#Vector(double, double, double)}.
      */

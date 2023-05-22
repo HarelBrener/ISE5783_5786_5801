@@ -1,5 +1,7 @@
 package primitives;
 
+import java.util.List;
+
 /**
  * Represents a ray in a 3D space.
  * A ray is defined by a starting point and a direction vector.
@@ -49,4 +51,14 @@ public class Ray {
         if (!(o instanceof Ray ray)) return false;
         return this.p0.equals(((Ray) o).p0) && this.dir.equals(((Ray) o).dir) ;
     }
+    /**
+
+     Finds the closest point from a given list of points.
+     @param list the list of points from which to find the closest point
+     @return the closest point from the list, or null if the list is empty
+     */
+    public Point findClosestPoint(List<Point> list){
+        return null;
+    }
+
 }

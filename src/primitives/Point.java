@@ -10,6 +10,9 @@ public class Point {
     // The coordinates of the point
     final Double3 xyz;
 
+    /** Zero triad (0,0,0) */
+    public static final Point ZERO = new Point(0, 0, 0);
+
     /**
      * Constructs a point with coordinates given by a Double3 object.
      * @param p the Double3 object representing the coordinates of the point

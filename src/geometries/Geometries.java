@@ -62,7 +62,7 @@ public class Geometries {
      * @param ray The ray to intersect with the geometries.
      * @return A list of intersection points with the geometries, or null if no intersection points exist.
      */
-    List<Point> findIntersections(Ray ray) {
+    public List<Point> findIntersections(Ray ray) {
         List<Point> result = null;
         for (Intersectable i : intrsc) {
             List<Point> fi = i.findIntsersections(ray);
