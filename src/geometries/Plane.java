@@ -8,7 +8,7 @@ import primitives.Vector;
 import java.util.List;
 import primitives.Util.*;
 
-public class Plane implements Geometry {
+public class Plane extends Geometry {
 
     // The base point of the plane
     final Point q0;
@@ -86,17 +86,17 @@ public class Plane implements Geometry {
      *             or null if there are no intersections.
      */
     @Override
-    public List<Point> findIntsersections(Ray ray){
+    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
         double nv = ray.getDir().dotProduct(normal);
         if (Util.isZero(nv))
             return null;
-        if(ray.getP0().equals(q0)) {
+        if (ray.getP0().equals(q0)) {
             return null;
         }
-        double t = (normal.dotProduct(q0.subtract(ray.getP0()))/nv);
-        if (t>0) {
+        double t = (normal.dotProduct(q0.subtract(ray.getP0())) / nv);
+        if (t > 0) {
             Point p = ((ray.getP0()).add((ray.getDir().scale(t))));
-            return List.of(p);
+            return List.of(new GeoPoint(this,p));
         }
         return null;
     }

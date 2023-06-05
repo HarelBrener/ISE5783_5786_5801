@@ -61,11 +61,12 @@ public class Sphere extends RadialGeometry {
      * @return     A list of intersection points between the specified ray and this Sphere object,
      *             or null if there are no intersections.
      */
+
     @Override
-    public List<Point> findIntsersections(Ray ray) {
+    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
         Point p1 = null, p2 = null;
         if(ray.getP0().equals(center)) {
-            return List.of(center.add(ray.getDir().scale(radius)));
+            return List.of(new GeoPoint(this, center.add(ray.getDir().scale(radius))));
         }
         Vector u = center.subtract(ray.getP0());
         double tm = u.dotProduct(ray.getDir());
@@ -82,9 +83,9 @@ public class Sphere extends RadialGeometry {
         if(t1<=0 && t2<=0)
             return null;
         if(t1<=0)
-            return List.of(p2);
+            return List.of(new GeoPoint(this,p2));
         if(t2<=0)
-            return List.of(p1);
-        return List.of(p1, p2);
+            return List.of(new GeoPoint(this, p1));
+        return List.of(new GeoPoint(this,p1),new GeoPoint(this,p2));
     }
 }

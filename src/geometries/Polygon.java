@@ -2,6 +2,7 @@ package geometries;
 
 import static primitives.Util.isZero;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import primitives.Point;
@@ -11,7 +12,7 @@ import primitives.Vector;
 /** Polygon class represents two-dimensional polygon in 3D Cartesian coordinate
  * system
  * @author Dan */
-public class Polygon implements Geometry {
+public class Polygon extends Geometry {
    /** List of polygon's vertices */
    protected final List<Point> vertices;
    /** Associated plane in which the polygon lays */
@@ -87,8 +88,54 @@ public class Polygon implements Geometry {
    @Override
    public Vector getNormal(Point point) { return plane.getNormal(); }
 
+   /**
+    Finds intersection points of a ray with a polygon in 3D space.
+    If no intersection points exist, returns null.
+    @param ray The ray to intersect with the polygon.
+    @return A list of intersection GeoPoints (if they exist), otherwise null.
+    */
    @Override
-   public List<Point> findIntsersections(Ray ray) {
-      return null;
+   public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
+      List<GeoPoint> l = plane.findGeoIntersectionsHelper(ray);
+      if (l == null)
+         return null;
+      Point p = l.get(0).point;
+      List<Vector> normals = null;
+      Vector x = null;
+      Vector y = null;
+      Point p0 = vertices.get(0);
+      Point pi = null;
+      Point pi1 = null;
+      for (int i = 0; i < size; i++) {
+         if (normals == null)
+            normals = new LinkedList<>();
+         pi = vertices.get(i);
+         if (i == size - 1) {
+            if (p0.equals(pi) || pi.equals(p))
+               return null;
+            x = p0.subtract(pi);
+            y = pi.subtract(p);
+            if (x.normalize().equals(y.normalize()) || x.normalize().equals(y.normalize().scale(-1)))
+               return null;
+            normals.add(x.crossProduct(y));
+         } else {
+            pi1 = vertices.get(i + 1);
+            if (pi.equals(pi1) || pi.equals(p))
+               return null;
+            x = pi1.subtract(pi);
+            y = pi.subtract(p);
+            if (x.normalize().equals(y.normalize()) || x.normalize().equals(y.normalize().scale(-1)))
+               return null;
+            else
+               normals.add(x.crossProduct(y));
+         }
+      }
+      for (int i = 0; i < size; i++) {
+         for (int j = i + 1; j < size; j++) {
+            if ((normals.get(i)).dotProduct(normals.get(j)) < 0)
+               return null;
+         }
+      }
+      return l;
    }
 }

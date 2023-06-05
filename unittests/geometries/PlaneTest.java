@@ -47,7 +47,7 @@ class PlaneTest {
         p0 = new Point(0,0,2);
         p = new Point(1,1,0);
         v = new Vector(1,1,-2);
-        List<Point> result = pln.findIntsersections(new Ray(p0,v));
+        List<Point> result = pln.findIntersections(new Ray(p0,v));
         assertEquals(List.of(p),result,"Ray starts outside the plane and there is intersection point");
         //TC02: Ray starts outside the plane, isn't parallel or orthogonal to the plane (0 points)
         //p = new Point(0,1,3);
@@ -58,26 +58,26 @@ class PlaneTest {
         // **** Group: Ray is parallel to the plane (all tests 0 points)
         //TC11: Ray is parallel to the plane and isn't inside it
         v = new Vector(0,1,0);
-        assertNull(pln.findIntsersections(new Ray(p0,v)),
+        assertNull(pln.findIntersections(new Ray(p0,v)),
                 "Ray is parallel to the plane and isn't inside it");
         //TC12: Ray is parallel to the plane and inside it
         p0 = new Point(0,-1,0);
-        assertNull(pln.findIntsersections(new Ray(p0,v)),
+        assertNull(pln.findIntersections(new Ray(p0,v)),
                 "Ray is parallel to the plane and inside it");
         // **** Group: Ray is orthogonal to the plane
         //TC13: Ray is orthogonal to the plane and goes towards it (1 point)
         p0 = new Point(0.5,0.5,-2);
         p = new Point(0.5,0.5,0);
         v = new Vector(0,0,1);
-        assertEquals(List.of(p),pln.findIntsersections(new Ray(p0,v)),
+        assertEquals(List.of(p),pln.findIntersections(new Ray(p0,v)),
                 "Ray is orthogonal to the plane and goes towards it");
         //TC14: Ray is orthogonal to the plane starts on it (0 points)
         p0 = p;
-        assertNull(pln.findIntsersections(new Ray(p0,v)),
+        assertNull(pln.findIntersections(new Ray(p0,v)),
                 "Ray is orthogonal to the plane starts on it");
         //TC15: Ray is orthogonal to the plane but directed against it (0 points)
         p0 = new Point (0.5, 1, 3);
-        assertNull(pln.findIntsersections(new Ray(p0,v)),
+        assertNull(pln.findIntersections(new Ray(p0,v)),
                 "Ray is orthogonal to the plane but directed against it");
         // **** Group: The other cases
         //TC16: Ray starts at the plane and isn't parallel or orthogonal to it

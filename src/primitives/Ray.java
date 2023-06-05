@@ -57,19 +57,9 @@ public class Ray {
      @param list the list of points from which to find the closest point
      @return the closest point from the list, or null if the list is empty
      */
-    public Point findClosestPoint(List<Point> list){
-        if(list == null)
-            return null;
-        double minD = getP0().distance(list.get(0));//min distance (for the "for")
-        Point minDP = list.get(0);//Point with min distance from P0
-        for (Point p : list){
-            double temp = p.distance(getP0());
-            if (temp<minD) {
-                minD = p.distance(getP0());
-                minDP = p;
-            }
-        }
-        return minDP;
+    public Point findClosestPoint(List<Point> points) {
+        return points == null || points.isEmpty() ? null
+                : findClosestGeoPoint(points.stream().map(p -> new GeoPoint(null, p)).toList()).point;
     }
 
 }

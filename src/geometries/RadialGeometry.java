@@ -7,7 +7,7 @@ package geometries;
  * To create a specific type of radial geometry, you should extend this class and implement any necessary methods.
  */
 
-public abstract class RadialGeometry implements Geometry {
+public abstract class RadialGeometry extends Geometry {
     protected final double  radius;
     RadialGeometry(double r)
     {

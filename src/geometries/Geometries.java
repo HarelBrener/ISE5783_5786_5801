@@ -4,7 +4,7 @@ import primitives.*;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Geometries {
+public class Geometries extends Intersectable {
 
     /**
      * The list of intersectable geometries in the collection.
@@ -45,8 +45,8 @@ public class Geometries {
      * @param fi     The new list of intersection points to check for duplicates.
      * @return The filtered list of intersection points, or null if no intersection points remain.
      */
-    List<Point> filter(List<Point> result, List<Point> fi) {
-        for (Point p : fi) {
+    List<GeoPoint> filterGeo(List<GeoPoint> result, List<GeoPoint> fi) {
+        for (GeoPoint p : fi) {
             if (result.contains(p)) {
                 if (fi.size() == 1)
                     return null;
@@ -62,15 +62,16 @@ public class Geometries {
      * @param ray The ray to intersect with the geometries.
      * @return A list of intersection points with the geometries, or null if no intersection points exist.
      */
-    public List<Point> findIntersections(Ray ray) {
-        List<Point> result = null;
+    @Override
+    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray){
+        List<GeoPoint> result = null;
         for (Intersectable i : intrsc) {
-            List<Point> fi = i.findIntsersections(ray);
+            List<GeoPoint> fi = i.findGeoIntersectionsHelper(ray);
             if (fi != null) {
                 if (result == null)
-                    result = new LinkedList<Point>(fi);
+                    result = new LinkedList<GeoPoint>(fi);
                 else {
-                    List<Point> l = this.filter(result, fi);
+                    List<GeoPoint> l = this.filterGeo(result, fi);
                     if (l != null)
                         result.addAll(l);
                 }

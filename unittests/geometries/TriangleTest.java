@@ -41,24 +41,24 @@ class TriangleTest {
         assertEquals(result,List.of(p),"The ray intersected the triangle");
         //TC02: The ray intersects the plane in front of the edge (!!but not the triangle!!)
         v = new Vector(1,1,-1);
-        result = trngl.findIntsersections(new Ray(p0,v));
+        result = trngl.findIntersections(new Ray(p0,v));
         assertNull(result,"The ray intersects the plane in front of the edge");
         //TC03: The ray intersects the plane in front of the vertex (!!but not the triangle!!)
         v = new Vector(2,0,-1);
-        result = trngl.findIntsersections(new Ray(p0,v));
+        result = trngl.findIntersections(new Ray(p0,v));
         assertNull(result,"The ray intersects the plane in front of the vertex");
         // =============== Boundary Values Tests ==================
         //TC11: The intersection point is on edge
         v = new Vector(0.5,0.5,-1);
-        result = trngl.findIntsersections(new Ray(p0,v));
+        result = trngl.findIntersections(new Ray(p0,v));
         assertNull(result,"The intersection point is on edge");
         //TC12: The intersection point is on vertex
         v = new Vector(1,0,-1);
-        result = trngl.findIntsersections(new Ray(p0,v));
+        result = trngl.findIntersections(new Ray(p0,v));
         assertNull(result,"The intersection point is on vertex");
         //TC13: The intersection point is on edge continuation
         v = new Vector(1.5,0.5,-1);
-        result = trngl.findIntsersections(new Ray(p0,v));
+        result = trngl.findIntersections(new Ray(p0,v));
         assertNull(result,"The intersection point is on edge continuation");
     }
 

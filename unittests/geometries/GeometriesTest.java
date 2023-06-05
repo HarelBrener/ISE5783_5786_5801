@@ -41,6 +41,6 @@ class GeometriesTest {
         //TC14: All the shapes are intersected
         r = new Ray(new Point(0.3,0.3,0.1),dir);
         p = new Point(0.3,0.3,0);
-        assertEquals(intrsc.findIntersections(r).size(),2,"All the shapes are intersected");
+        assertEquals(intrsc.findIntersections(r).size(),3,"All the shapes are intersected");
     }
 }

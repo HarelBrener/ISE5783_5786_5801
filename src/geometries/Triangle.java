@@ -23,11 +23,11 @@ public class Triangle extends Polygon {
      Finds intersection points of a ray with a triangle in 3D space.
      If no intersection points exist, returns null.
      @param ray The ray to intersect with the triangle.
-     @return A list of intersection points (if they exist), otherwise null.
+     @return A list of intersection Geooints (if they exist), otherwise null.
      */
     @Override
-    public List<Point> findIntsersections(Ray ray) {
-        List<Point> l = plane.findIntsersections(ray);
+    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
+        List<GeoPoint> l = plane.findGeoIntersectionsHelper(ray);
         if (l == null)
             return null;
         Point p = l.get(0);
@@ -50,7 +50,7 @@ public class Triangle extends Polygon {
         Vector n2 = x2.crossProduct(y2);
         Vector n3 = x3.crossProduct(y3);
         if(n1.dotProduct(n2)>0 && n1.dotProduct(n3)>0 && n3.dotProduct(n2)>0)
-            return List.of(p);
+            return List.of(new GeoPoint(this,p));
         return null;
     }
 }
