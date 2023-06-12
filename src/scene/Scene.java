@@ -40,17 +40,17 @@ public class Scene {
     /**
      * Represents a list of light sources.
      */
-    List<LightSource> light = new LinkedList<>();
+    public List<LightSource> lights = new LinkedList<>();
 
     /**
      * Sets the list of light sources.
      *
      * @param light The new list of light sources.
-     * @return The updated list of light sources.
+     * @return The updated Scene object.
      */
-    public List<LightSource> setLight(List<LightSource> light) {
-        this.light = light;
-        return this.light;
+    public Scene setLights(List<LightSource> light) {
+        this.lights = light;
+        return this;
     }
 
     /**

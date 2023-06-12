@@ -99,7 +99,7 @@ public class PolygonTest {
       Vector v;//Ray's direction vector
       List<Point> result;
       // ============ Equivalence Partitions Tests ==============
-      //TC01: The ray intersects the triangle (1 point)
+      //TC01: The ray intersects the polygon (1 point)
       p = new Point(0.3,0.3,0);
       v = new Vector(0.3,0.3,-1);
       result = trngl.findIntersections(new Ray(p0,v));
@@ -108,7 +108,7 @@ public class PolygonTest {
       v = new Vector(1,1,-1);
       result = trngl.findIntersections(new Ray(p0,v));
       assertNull(result,"The ray intersects the plane in front of the edge");
-      //TC03: The ray intersects the plane in front of the vertex (!!but not the triangle!!)
+      //TC03: The ray intersects the plane in front of the vertex (!!but not the polygon!!)
       v = new Vector(2,0,-1);
       result = trngl.findIntersections(new Ray(p0,v));
       assertNull(result,"The ray intersects the plane in front of the vertex");

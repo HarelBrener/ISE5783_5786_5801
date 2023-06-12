@@ -27,21 +27,21 @@ public class PointLight extends Light implements LightSource {
     }
 
     public Vector getL(Point p) {
-        return p.subtract(this.position);
+        return (p.subtract(this.position)).normalize();
     }
 
-    public double setkC(double kC) {
+    public PointLight setKc(double kC) {
         this.kC = kC;
-        return this.kC;
+        return this;
     }
 
-    public double setkL(double kL) {
+    public PointLight setKl(double kL) {
         this.kL = kL;
-        return this.kL;
+        return this;
     }
 
-    public double setkQ(double kQ) {
+    public PointLight setKq(double kQ) {
         this.kQ = kQ;
-        return this.kQ;
+        return this;
     }
 }
