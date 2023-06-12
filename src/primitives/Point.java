@@ -84,7 +84,7 @@ public class Point {
      * @param p1 the accepted point
      * @return the square of the distance between the two points
      */
-    double distanceSquared(Point p1) {
+    public double distanceSquared(Point p1) {
         Point subP = p1.subtract(this);
         return (subP.xyz.d1 * subP.xyz.d1 + subP.xyz.d2 * subP.xyz.d2 + subP.xyz.d3 * subP.xyz.d3);
     }
