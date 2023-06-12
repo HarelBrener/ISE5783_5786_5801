@@ -30,7 +30,7 @@ class IntegrationTests {
         List<Point> l = null;
         for (int i=0;i<num;i++){
             for (int j=0; j<num;j++) {
-                l = object.findIntsersections(camera.constructRay(num, num, j, i));
+                l = object.findIntersections(camera.constructRay(num, num, j, i));
                 if ( l != null)
                     sum += l.size();
             }

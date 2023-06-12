@@ -58,7 +58,7 @@ public class Sphere extends RadialGeometry {
      * Finds the intersections of the specified ray with this Sphere object in 3D space.
      *
      * @param ray  The ray to intersect with this Sphere object.
-     * @return     A list of intersection points between the specified ray and this Sphere object,
+     * @return     A list of intersection GeoPoints between the specified ray and this Sphere object,
      *             or null if there are no intersections.
      */
 

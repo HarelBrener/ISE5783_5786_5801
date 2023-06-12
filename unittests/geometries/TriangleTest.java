@@ -37,7 +37,7 @@ class TriangleTest {
         //TC01: The ray intersects the triangle (1 point)
         p = new Point(0.3,0.3,0);
         v = new Vector(0.3,0.3,-1);
-        result = trngl.findIntsersections(new Ray(p0,v));
+        result = trngl.findIntersections(new Ray(p0,v));
         assertEquals(result,List.of(p),"The ray intersected the triangle");
         //TC02: The ray intersects the plane in front of the edge (!!but not the triangle!!)
         v = new Vector(1,1,-1);

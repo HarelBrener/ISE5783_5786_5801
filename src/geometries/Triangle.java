@@ -30,7 +30,7 @@ public class Triangle extends Polygon {
         List<GeoPoint> l = plane.findGeoIntersectionsHelper(ray);
         if (l == null)
             return null;
-        Point p = l.get(0);
+        Point p = l.get(0).point;
         Point p0 = this.vertices.get(0);
         Point p1 = this.vertices.get(1);
         Point p2 = this.vertices.get(2);

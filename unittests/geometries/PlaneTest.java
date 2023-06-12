@@ -34,7 +34,7 @@ class PlaneTest {
     }
 
     /**
-     * Test method for {@link Plane#findIntsersections(Ray)}.
+     * Test method for {@link Plane#findIntersections(Ray)}.
      */
     @Test
     void testFindIntersectionPoints(){
@@ -52,7 +52,7 @@ class PlaneTest {
         //TC02: Ray starts outside the plane, isn't parallel or orthogonal to the plane (0 points)
         //p = new Point(0,1,3);
         v = new Vector(0,1,1);
-        result = pln.findIntsersections(new Ray(p0,v));
+        result = pln.findIntersections(new Ray(p0,v));
         assertNull(result,"Ray starts outside the sphere and there is no intersection point");
         // =============== Boundary Values Tests ==================
         // **** Group: Ray is parallel to the plane (all tests 0 points)
@@ -83,11 +83,11 @@ class PlaneTest {
         //TC16: Ray starts at the plane and isn't parallel or orthogonal to it
         p0 = new Point(0.5, 0.5,0);
         v = new Vector(0,3,3);
-        assertNull(pln.findIntsersections(new Ray(p0,v)),
+        assertNull(pln.findIntersections(new Ray(p0,v)),
                 "Ray starts at the plane and isn't parallel or orthogonal to it");
         //TC17: Ray starts at q0 (field, point on the plane) and isn't parallel or orthogonal to the plane
         p0 = new Point (1,0,0);
-        assertNull(pln.findIntsersections(new Ray(p0,v)),
+        assertNull(pln.findIntersections(new Ray(p0,v)),
                 "Ray starts at q0 and isn't parallel or orthogonal to it");
     }
 

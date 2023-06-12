@@ -60,7 +60,7 @@ public class Geometries extends Intersectable {
      * Finds the intersection points of a given ray with the geometries in the collection.
      *
      * @param ray The ray to intersect with the geometries.
-     * @return A list of intersection points with the geometries, or null if no intersection points exist.
+     * @return A list of intersection GeoPoints with the geometries, or null if no intersection points exist.
      */
     @Override
     public List<GeoPoint> findGeoIntersectionsHelper(Ray ray){
