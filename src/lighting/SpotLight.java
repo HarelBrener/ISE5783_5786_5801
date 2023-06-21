@@ -22,4 +22,9 @@ public class SpotLight extends PointLight{
     public Vector getL(Point p) {
         return super.getL(p);
     }
+
+    @Override
+    public double getDistance(Point point) {
+        return super.getDistance(point);
+    }
 }

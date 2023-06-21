@@ -76,5 +76,48 @@ public class Material {
         return this;
     }
 
+    /**
+     * Sets the transparency coefficient of the material.
+     *
+     * @param kT The transparency coefficient to be set for the material.
+     * @return The current Material object.
+     */
+    public Material setkT(Double3 kT) {
+        this.kT = kT;
+        return this;
+    }
+
+    /**
+     * Sets the reflection coefficient of the material.
+     *
+     * @param kR The reflection coefficient to be set for the material.
+     * @return The current Material object.
+     */
+    public Material setkR(Double3 kR) {
+        this.kR = kR;
+        return this;
+    }
+
+    /**
+     * Sets the transparency coefficient of the material.
+     *
+     * @param kT The transparency coefficient to be set for the material.
+     * @return The current Material object.
+     */
+    public Material setkT(double kT) {
+        this.kT = new Double3(kT);
+        return this;
+    }
+
+    /**
+     * Sets the reflection coefficient of the material.
+     *
+     * @param kR The reflection coefficient to be set for the material.
+     * @return The current Material object.
+     */
+    public Material setkR(double kR) {
+        this.kR = new Double3(kR);
+        return this;
+    }
 }
 

@@ -95,7 +95,7 @@ public class Point {
      * @param p1 the accepted point
      * @return the distance between the two points
      */
-    double distance(Point p1) {
+    public double distance(Point p1) {
         return Math.sqrt(distanceSquared(p1));
     }
 
