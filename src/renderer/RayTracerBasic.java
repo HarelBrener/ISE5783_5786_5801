@@ -188,9 +188,7 @@ public RayTracerBasic(Scene scene) {
      */
     private boolean unshaded(GeoPoint gp, LightSource light, Vector l, Vector n, double nl) {
         Vector lightDirection = l.scale(-1); // from point to light source
-        Vector epsVector = n.scale(nl < 0 ? DELTA : -DELTA);
-        Point point = gp.point.add(epsVector);
-        Ray lightRay = new Ray(point, lightDirection);
+        Ray lightRay = new Ray(gp.point, lightDirection, n);
         List<GeoPoint> intersections = scene.geometries.findGeoIntersections(lightRay);
         if (intersections == null) {
             return true;
@@ -247,8 +245,8 @@ public RayTracerBasic(Scene scene) {
      */
     public Ray constructRefractedRay(Vector n, Point p, Ray ray) {
         Vector r = ray.getDir().scale(-1);
-        Point ph = new Point(n.getX() - DELTA, n.getY() - DELTA, n.getZ() - DELTA);
-        return new Ray(ph, r);
+        Point ph = new Point(n.getX(), n.getY(), n.getZ());
+        return new Ray(ph, r, n);
     }
 
     /**

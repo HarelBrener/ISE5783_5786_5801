@@ -27,6 +27,15 @@ public class Ray {
         dir = v.normalize();
     }
 
+    public Ray(Point head, Vector direction, Vector normal){
+        double nl = alignZero(normal.dotProduct(direction));
+        if(nl == 0)
+            this.p0 = head;
+        else
+            p0 = head.add(normal.scale(nl < 0 ? -DELTA: DELTA));
+        dir = direction.normalize();
+    }
+
     /**
      * Returns the starting point of the ray.
      * @return The starting point of the ray.
