@@ -2,6 +2,7 @@ package primitives;
 
 import java.util.List;
 import geometries.Intersectable.GeoPoint;
+import static primitives.Util.alignZero;
 
 
 /**
@@ -9,6 +10,8 @@ import geometries.Intersectable.GeoPoint;
  * A ray is defined by a starting point and a direction vector.
  */
 public class Ray {
+
+    private static final double DELTA = 0.1;
 
     /** The starting point of the ray */
     final Point p0;

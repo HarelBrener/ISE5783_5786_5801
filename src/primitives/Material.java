@@ -16,6 +16,17 @@ public class Material {
     public Double3 kS = new Double3(0);
 
     /**
+     * The transparency coefficient of the material.
+     * Default value is Double3.Zero.
+     */
+    public Double3 kT = Double3.ZERO;
+
+    /**
+     * The reflection coefficient of the material.
+     * Default value is Double3.Zero.
+     */
+    public Double3 kR = Double3.ZERO;
+    /**
      * The shininess of the material.
      * Default value is 0.
      */
