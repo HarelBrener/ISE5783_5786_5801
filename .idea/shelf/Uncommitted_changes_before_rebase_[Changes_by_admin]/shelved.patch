@@ -1,0 +1,19 @@
+Index: src/geometries/Triangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package geometries;\r\n\r\nimport primitives.*;\r\n\r\nimport java.util.List;\r\n\r\n/**\r\n * The Triangle class represents a triangle in 3D space defined by three vertices.\r\n * It extends the Polygon class, which represents a polygon in 3D space.\r\n */\r\npublic class Triangle extends Polygon {\r\n    /** Constructs a Triangle by 3 points\r\n     * @param p1 the first point\r\n     * @param p2 the second point\r\n     * @param p3 the third point\r\n    * */\r\n    Triangle(Point p1, Point p2,Point p3)\r\n    {\r\n        super(p1,p2,p3);\r\n    }\r\n\r\n    /**\r\n     Finds intersection points of a ray with a triangle in 3D space.\r\n     If no intersection points exist, returns null.\r\n     @param ray The ray to intersect with the triangle.\r\n     @return A list of intersection points (if they exist), otherwise null.\r\n     */\r\n    @Override\r\n    public List<Point> findIntsersections(Ray ray) {\r\n        List<Point> l = plane.findIntsersections(ray);\r\n        if (l == null)\r\n            return null;\r\n        Point p = l.get(0);\r\n        Point p0 = this.vertices.get(0);\r\n        Point p1 = this.vertices.get(1);\r\n        Point p2 = this.vertices.get(2);\r\n        if(p.equals(p0)||p.equals(p1)||p.equals(p2))\r\n            return null;\r\n        Vector x1 = p1.subtract(p0);\r\n        Vector x2 = p2.subtract(p1);\r\n        Vector x3 = p0.subtract(p2);\r\n        Vector y1 = p0.subtract(p);\r\n        Vector y2 = p1.subtract(p);\r\n        Vector y3 = p2.subtract(p);\r\n        if(x1.normalize().equals(y1.normalize())||x1.normalize().scale(-1).equals(y1.normalize())\r\n                ||(x2.normalize().equals(y2.normalize())||x2.normalize().scale(-1).equals(y2.normalize()))\r\n                ||(x3.normalize().equals(y3.normalize())||x3.normalize().scale(-1).equals(y3.normalize())))\r\n            return null;\r\n        Vector n1 = x1.crossProduct(y1);\r\n        Vector n2 = x2.crossProduct(y2);\r\n        Vector n3 = x3.crossProduct(y3);\r\n        if(n1.dotProduct(n2)>0 && n1.dotProduct(n3)>0 && n3.dotProduct(n2)>0)\r\n            return List.of(p);\r\n        return null;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/geometries/Triangle.java b/src/geometries/Triangle.java
+--- a/src/geometries/Triangle.java	(revision b0fa494b510ddb00c6e70af0a5b703742457e0ec)
++++ b/src/geometries/Triangle.java	(date 1683539755383)
+@@ -14,7 +14,7 @@
+      * @param p2 the second point
+      * @param p3 the third point
+     * */
+-    Triangle(Point p1, Point p2,Point p3)
++    public Triangle(Point p1, Point p2,Point p3)
+     {
+         super(p1,p2,p3);
+     }
