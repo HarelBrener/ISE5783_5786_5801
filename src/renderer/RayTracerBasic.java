@@ -14,6 +14,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import static primitives.Util.alignZero;
+import static primitives.Util.isZero;
 
 public class RayTracerBasic extends RayTracerBase {
 
@@ -93,7 +94,7 @@ public RayTracerBasic(Scene scene) {
      * @param k     The coefficient of the ray's path.
      * @return The color of the global effects.
      */
-    private Color calcGlobalEffects(GeoPoint gp, Ray ray, int level, Double3 k) {
+    /*private Color calcGlobalEffects(GeoPoint gp, Ray ray, int level, Double3 k) {
         Color color = Color.BLACK;
         Material mat = gp.geometry.getMaterial();
         Double3 kr = mat.kR;
@@ -111,7 +112,41 @@ public RayTracerBasic(Scene scene) {
             color = color.add(calcColor(refractedPoint, refractedRay, level - 1, kkt).scale(kt));
         }
         return color;
+    }*/
+
+
+
+
+
+
+
+    private Color calcGlobalEffects(GeoPoint gp, Ray ray, int level, Double3 k) {
+        Color color = Color.BLACK;
+        Vector v = ray.getDir();
+        Vector n = gp.geometry.getNormal(gp.point);
+        Material material = gp.geometry.getMaterial();
+        return calcGlobalEffect((constructReflectedRay(n, gp.point, new Ray(gp.point,v))),
+                level, k, material.kR)
+                .add(calcGlobalEffect(constructRefractedRay(n, gp.point, new Ray(gp.point,v)),
+                        level, k, material.kT));
     }
+    private Color calcGlobalEffect(Ray ray, int level, Double3 k, Double3 kx) {
+        Double3 kkx = k.product(kx);
+        if (kkx.lowerThan(MIN_CALC_COLOR_K)) return Color.BLACK;
+        GeoPoint gp = findClosestIntersection(ray);
+        if (gp == null) return scene.background.scale(kx);
+        return isZero(gp.geometry.getNormal(gp.point).dotProduct(ray.getDir()))
+                ? Color.BLACK : calcColor(gp, ray, level - 1, kkx).scale(kx);
+    }
+
+
+
+
+
+
+
+
+
 
     /**
      * Calculates the local effects (diffuse and specular reflection) for a point in the scene.
