@@ -50,7 +50,6 @@ public RayTracerBasic(Scene scene) {
         GeoPoint closestGeoPoint = findClosestIntersection(ray);
         if (closestGeoPoint == null)
             return scene.background;
-        //GeoPoint cp = ray.findClosestGeoPoint(l);
         return calcColor(closestGeoPoint,ray);
     }
 
