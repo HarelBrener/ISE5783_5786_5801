@@ -11,12 +11,15 @@ import java.lang.Math;
  */
 public class Sphere extends RadialGeometry {
 
-    /** The center point of the sphere */
+    /**
+     * The center point of the sphere
+     */
     final Point center;
 
     /**
      * Constructs a sphere with the specified radius and center point.
-     * @param r The radius of the sphere.
+     *
+     * @param r      The radius of the sphere.
      * @param center The center point of the sphere.
      */
     public Sphere(double r, Point center) {
@@ -26,6 +29,7 @@ public class Sphere extends RadialGeometry {
 
     /**
      * Returns the center point of the sphere.
+     *
      * @return The center point of the sphere.
      */
     public Point getCenter() {
@@ -34,6 +38,7 @@ public class Sphere extends RadialGeometry {
 
     /**
      * Returns the radius of the sphere.
+     *
      * @return The radius of the sphere.
      */
     public double getRadius() {
@@ -44,6 +49,7 @@ public class Sphere extends RadialGeometry {
      * Returns the normal vector to the sphere at a given point.
      * For a sphere, the normal vector is simply the vector from the center of the sphere
      * to the given point, normalized to have a length of 1.
+     *
      * @param p The point on the sphere for which to compute the normal vector.
      * @return The normal vector to the sphere at the given point.
      */
@@ -57,35 +63,38 @@ public class Sphere extends RadialGeometry {
     /**
      * Finds the intersections of the specified ray with this Sphere object in 3D space.
      *
-     * @param ray  The ray to intersect with this Sphere object.
-     * @return     A list of intersection GeoPoints between the specified ray and this Sphere object,
-     *             or null if there are no intersections.
+     * @param ray The ray to intersect with this Sphere object.
+     * @return A list of intersection GeoPoints between the specified ray and this Sphere object,
+     * or null if there are no intersections.
      */
 
     @Override
     public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
-        Point p1 = null, p2 = null;
-        if(ray.getP0().equals(center)) {
+        //Point p1 = null, p2 = null;
+        if (ray.getP0().equals(center)) {
             return List.of(new GeoPoint(this, center.add(ray.getDir().scale(radius))));
         }
         Vector u = center.subtract(ray.getP0());
         double tm = u.dotProduct(ray.getDir());
-        double d = Math.sqrt((u.length()*u.length())-(tm*tm));
-        if(d >= radius)
+        double d = Math.sqrt((u.length() * u.length()) - (tm * tm));
+        if (d >= radius)
             return null;
-        double th = Math.sqrt(radius*radius-d*d);
+        double th = Math.sqrt(radius * radius - d * d);
         double t1 = alignZero(tm - th);
         double t2 = alignZero(tm + th);
-        if(t1>0)
-            p1 = ray.getP0().add(ray.getDir().scale(t1));
-        if(t2>0)
-            p2 = ray.getP0().add(ray.getDir().scale(t2));
-        if(t1<=0 && t2<=0)
+        Point p1, p2;
+        if (t1 <= 0 && t2 <= 0)
             return null;
-        if(t1<=0)
-            return List.of(new GeoPoint(this,p2));
-        if(t2<=0)
+        else if (t1 > 0 && t2 <= 0) {
+            p1 = ray.getP0().add(ray.getDir().scale(t1));
             return List.of(new GeoPoint(this, p1));
-        return List.of(new GeoPoint(this,p1),new GeoPoint(this,p2));
+        } else if (t1 <= 0 && t2 > 0) {
+            p2 = ray.getP0().add(ray.getDir().scale(t2));
+            return List.of(new GeoPoint(this, p2));
+        } else {
+            p1 = ray.getP0().add(ray.getDir().scale(t1));
+            p2 = ray.getP0().add(ray.getDir().scale(t2));
+            return List.of(new GeoPoint(this, p1), new GeoPoint(this, p2));
+        }
     }
 }

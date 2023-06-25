@@ -2,13 +2,17 @@ package primitives;
 
 import java.util.List;
 import geometries.Intersectable.GeoPoint;
+import primitives.*;
 
+import static primitives.Util.alignZero;
 
 /**
  * Represents a ray in a 3D space.
  * A ray is defined by a starting point and a direction vector.
  */
 public class Ray {
+
+    private static final double DELTA = 0.1;
 
     /** The starting point of the ray */
     final Point p0;

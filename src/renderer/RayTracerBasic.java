@@ -18,8 +18,6 @@ import static primitives.Util.isZero;
 
 public class RayTracerBasic extends RayTracerBase {
 
-    private static final double DELTA = 0.1;
-
     /** The maximum times we will do the recurse */
     private static final int MAX_CALC_COLOR_LEVEL = 10;
 
@@ -199,9 +197,8 @@ public RayTracerBasic(Scene scene) {
      * @return The reflected ray.
      */
     public Ray constructReflectedRay(Vector n, Point p, Ray ray) {
-        Vector r = ray.getDir().subtract(n.scale(ray.getDir().dotProduct(n) * -2));
-        Point ph = new Point(n.getX() + DELTA, n.getY() + DELTA, n.getZ() + DELTA);
-        return new Ray(ph, r);
+        Vector r = ray.getDir().subtract(n.scale(ray.getDir().dotProduct(n) * 2));
+        return new Ray(p, r, n);
     }
 
     /**

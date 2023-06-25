@@ -13,8 +13,12 @@ import geometries.Triangle;
 import lighting.AmbientLight;
 import lighting.SpotLight;
 import primitives.*;
+import primitives.Color;
+import primitives.Point;
 import renderer.*;
 import scene.Scene;
+
+import java.awt.*;
 
 /** Tests for reflection and transparency functionality, test for partial
  * shadows
