@@ -6,14 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="25.6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" afterDir="false" />
     </list>
     <list id="a76c10ed-df6a-46eb-b6f0-30fd3618b46b" name="Changes by admin" comment="" />
     <list id="816b0e76-e700-4529-83b0-1cd3bf7a5785" name="Changes by DELL" comment="">
       <change beforePath="$PROJECT_DIR$/src/geometries/Intersectable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Intersectable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/geometries/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primitives/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Material.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +56,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/renderer/RayTracerBasic.java">
+    <file path="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java">
       <ranges>
-        <range start1="20" end1="22" start2="20" end2="20" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="52" end1="53" start2="50" end2="50" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="202" end1="205" start2="199" end2="201" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
+        <range start1="7" end1="7" start2="7" end2="8" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="14" end1="14" start2="15" end2="17" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
+        <range start1="16" end1="16" start2="19" end2="21" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
+        <range start1="106" end1="106" start2="111" end2="144" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
       </ranges>
     </file>
   </component>
@@ -66,7 +69,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2MKAjOPxqdW5iiYeCj02VxbzdRj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -120,7 +123,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in ISE5783_5876_5801">
+  <component name="RunManager" selected="JUnit.ReflectionRefractionTests.fourObjects">
     <configuration name="All in ISE5783_5876_5801" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5783_5876_5801" />
       <option name="PACKAGE_NAME" value="" />
@@ -139,21 +142,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="geometries" />
       <option name="MAIN_CLASS_NAME" value="geometries.GeometriesTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImageWriterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5783_5876_5801" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ImageWriterTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -189,13 +177,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReflectionRefractionTests.fourObjects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5783_5876_5801" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
+      <option name="METHOD_NAME" value="fourObjects" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReflectionRefractionTests.fourObjects" />
         <item itemvalue="JUnit.All in ISE5783_5876_5801" />
         <item itemvalue="JUnit.PolygonTest" />
         <item itemvalue="JUnit.GeometriesTest" />
         <item itemvalue="JUnit.RayTest" />
-        <item itemvalue="JUnit.ImageWriterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +345,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1687701618447</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL‎-00020" summary="25.6">
+      <created>1687714775415</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL‎-00020" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1687714775415</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -420,6 +431,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ISE5783_5786_5801$PlaneTest.ic" NAME="PlaneTest Coverage Results" MODIFIED="1682889908045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>geometries.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ISE5783_5876$ReflectionRefractionTests_fourObjects.ic" NAME="ReflectionRefractionTests.fourObjects Coverage Results" MODIFIED="1687723752556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>renderer.*</FILTER>
     </SUITE>
   </component>
 </project>
