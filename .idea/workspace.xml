@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="23.6">
+    <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="24.6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" afterDir="false" />
     </list>
@@ -46,12 +46,6 @@
         </map>
       </branch-storage>
     </favorite-branches>
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -62,14 +56,20 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/src/renderer/RayTracerBasic.java">
       <ranges>
-        <range start1="16" end1="16" start2="16" end2="17" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="19" end1="21" start2="20" end2="20" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="95" end1="96" start2="94" end2="95" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="113" end1="113" start2="112" end2="129" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="114" end1="114" start2="130" end2="147" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="195" end1="196" start2="228" end2="229" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="197" end1="198" start2="230" end2="231" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="232" end1="235" start2="265" end2="268" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
+        <range start1="20" end1="22" start2="20" end2="20" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
+        <range start1="77" end1="78" start2="75" end2="76" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="96" end1="97" start2="94" end2="95" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="103" end1="106" start2="101" end2="102" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="110" end1="111" start2="106" end2="109" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="114" end1="131" start2="112" end2="112" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="132" end1="148" start2="113" end2="113" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="157" end1="160" start2="122" end2="123" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="172" end1="174" start2="135" end2="138" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="212" end1="241" start2="176" end2="177" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="242" end1="245" start2="178" end2="180" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="246" end1="257" start2="181" end2="190" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="267" end1="270" start2="200" end2="202" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
+        <range start1="281" end1="284" start2="213" end2="214" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
       </ranges>
     </file>
   </component>
@@ -338,7 +338,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1687528876003</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL‎-00018" summary="24.6">
+      <created>1687641579283</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL‎-00018" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1687641579283</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -398,7 +405,8 @@
     <MESSAGE value="12/6 update" />
     <MESSAGE value="22.6" />
     <MESSAGE value="23.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="23.6" />
+    <MESSAGE value="24.6" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.6" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
