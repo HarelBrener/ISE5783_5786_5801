@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="22.6">
+    <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="Merge remote-tracking branch 'origin/master1' into master1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/RayTracerBasic.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" afterDir="false" />
     </list>
     <list id="a76c10ed-df6a-46eb-b6f0-30fd3618b46b" name="Changes by admin" comment="" />
-    <list id="816b0e76-e700-4529-83b0-1cd3bf7a5785" name="Changes by DELL" comment="">
-      <change beforePath="$PROJECT_DIR$/src/geometries/Intersectable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Intersectable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Material.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" afterDir="false" />
-    </list>
+    <list id="816b0e76-e700-4529-83b0-1cd3bf7a5785" name="Changes by DELL" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,26 +47,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/renderer/RayTracerBasic.java">
-      <ranges>
-        <range start1="19" end1="21" start2="19" end2="19" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="190" end1="193" start2="188" end2="189" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="197" end1="198" start2="193" end2="194" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="199" end1="200" start2="195" end2="196" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="235" end1="237" start2="231" end2="233" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="249" end1="251" start2="245" end2="247" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/primitives/Ray.java">
-      <ranges>
-        <range start1="4" end1="4" start2="4" end2="5" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="5" end1="5" start2="6" end2="7" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="12" end1="12" start2="14" end2="16" changelist="816b0e76-e700-4529-83b0-1cd3bf7a5785" />
-        <range start1="29" end1="29" start2="33" end2="42" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -132,7 +106,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in ISE5783_5876_5801">
+  <component name="RunManager" selected="JUnit.ReflectionRefractionTests">
     <configuration name="All in ISE5783_5876_5801" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5783_5876_5801" />
       <option name="PACKAGE_NAME" value="" />
@@ -156,21 +130,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImageWriterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5783_5876_5801" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="renderer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="renderer" />
-      <option name="MAIN_CLASS_NAME" value="renderer.ImageWriterTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PolygonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5783_5876_5801" />
       <extension name="coverage">
@@ -186,16 +145,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReflectionRefractionTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5783_5876_5801" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="primitives.*" />
+          <option name="PATTERN" value="renderer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="primitives" />
-      <option name="MAIN_CLASS_NAME" value="primitives.RayTest" />
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ReflectionRefractionTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShadowTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5783_5876_5801" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -203,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReflectionRefractionTests" />
+        <item itemvalue="JUnit.ShadowTests" />
         <item itemvalue="JUnit.All in ISE5783_5876_5801" />
         <item itemvalue="JUnit.PolygonTest" />
         <item itemvalue="JUnit.GeometriesTest" />
-        <item itemvalue="JUnit.RayTest" />
-        <item itemvalue="JUnit.ImageWriterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +299,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1687440463494</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL‎-00016" summary="Merge remote-tracking branch 'origin/master1' into master1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/RayTracerBasic.java">
+      <created>1687647078338</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL‎-00016" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1687647078338</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -339,7 +320,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master1" />
+                        <option value="origin/master1" />
                       </list>
                     </value>
                   </entry>
@@ -384,7 +365,9 @@
     <MESSAGE value="5/6" />
     <MESSAGE value="12/6 update" />
     <MESSAGE value="22.6" />
-    <option name="LAST_COMMIT_MESSAGE" value="22.6" />
+    <MESSAGE value="25/6 update" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master1' into master1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/RayTracerBasic.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master1' into master1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/renderer/RayTracerBasic.java" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
