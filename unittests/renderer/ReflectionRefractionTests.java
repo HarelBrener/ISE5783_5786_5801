@@ -120,7 +120,7 @@ public class ReflectionRefractionTests {
 
         scene.geometries.add(//
                 new Triangle(new Point(0, -3, 7), new Point(2, 5, 7), new Point(-2, 5, 7)) //ice cream corn
-                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60)).setEmission(new Color(186, 95, 28)), //
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkT(0.4)).setEmission(new Color(186, 95, 28)), //
                 new Sphere(1.5d, new Point(0.5, 5.5, 0)).setEmission(new Color(245, 230, 220)) //ice cream
                         .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkR(0.6)), //
                 new Sphere(0.25d, new Point(0.3, 4.75, 9)).setEmission(new Color(245, 230, 220)) //ice cream melted
@@ -146,9 +146,9 @@ public class ReflectionRefractionTests {
                 new Sphere(0.5d, new Point(-0.3, 7, 0)).setEmission(new Color(230, 220, 7)) //ice cream
                         .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkR(0.6)),//
                 new Triangle(new Point(30, -30, -30), new Point(-30, 30, -30), new Point(-30, -30, -35))//base triangle down
-                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.2)).setEmission(new Color(34, 3, 123)),//
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.6)).setEmission(new Color(34, 3, 123)),//
                 new Triangle(new Point(30, -30, -30), new Point(-30, 30, -30), new Point(30, 30, -35)) //base triangle up
-                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.2)).setEmission(new Color(1, 123, 12)),
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.6)).setEmission(new Color(1, 123, 12)),
                 new Sphere(2d, new Point(-8, -7, 6)).setEmission(new Color(255, 255, 70)) //melon
                         .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkR(0.6)),
                 new Sphere(3d, new Point(-7, -6, 0)).setEmission(new Color(0, 50, 0)) // water melon

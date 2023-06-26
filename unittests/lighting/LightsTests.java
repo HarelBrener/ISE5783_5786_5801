@@ -33,7 +33,10 @@ public class LightsTests {
 
    private final Material       material                = new Material().setKd(KD3).setKs(KS3).setShininess(SHININESS);
    private final Color          trianglesLightColor     = new Color(800, 500, 250);
+   private final double          trianglesLightRadius     = 3; /////////////////
    private final Color          sphereLightColor        = new Color(800, 500, 0);
+   private final double         sphereLightRadius     = 2; ////////////////////
+
    private final Color          sphereColor             = new Color(BLUE).reduce(2);
 
    private final Point          sphereCenter            = new Point(0, 0, -50);
@@ -79,7 +82,7 @@ public class LightsTests {
    @Test
    public void spherePoint() {
       scene1.geometries.add(sphere);
-      scene1.lights.add(new PointLight(sphereLightColor, sphereLightPosition)
+      scene1.lights.add(new PointLight(sphereLightColor, sphereLightPosition) ////////////////////
          .setKl(0.001).setKq(0.0002));
 
       ImageWriter imageWriter = new ImageWriter("lightSpherePoint", 500, 500);
@@ -93,7 +96,7 @@ public class LightsTests {
    @Test
    public void sphereSpot() {
       scene1.geometries.add(sphere);
-      scene1.lights.add(new SpotLight(sphereLightColor, sphereLightPosition, new Vector(1, 1, -0.5))
+      scene1.lights.add(new SpotLight(sphereLightColor, sphereLightPosition, new Vector(1, 1, -0.5)) ///////////////
          .setKl(0.001).setKq(0.0001));
 
       ImageWriter imageWriter = new ImageWriter("lightSphereSpot", 500, 500);
@@ -120,7 +123,7 @@ public class LightsTests {
    @Test
    public void trianglesPoint() {
       scene2.geometries.add(triangle1, triangle2);
-      scene2.lights.add(new PointLight(trianglesLightColor, trianglesLightPosition)
+      scene2.lights.add(new PointLight(trianglesLightColor, trianglesLightPosition) ///////////////////////
          .setKl(0.001).setKq(0.0002));
 
       ImageWriter imageWriter = new ImageWriter("lightTrianglesPoint", 500, 500);
@@ -134,7 +137,7 @@ public class LightsTests {
    @Test
    public void trianglesSpot() {
       scene2.geometries.add(triangle1, triangle2);
-      scene2.lights.add(new SpotLight(trianglesLightColor, trianglesLightPosition, trianglesLightDirection)
+      scene2.lights.add(new SpotLight(trianglesLightColor, trianglesLightPosition,trianglesLightDirection) ///////////////
          .setKl(0.001).setKq(0.0001));
 
       ImageWriter imageWriter = new ImageWriter("lightTrianglesSpot", 500, 500);
@@ -176,10 +179,10 @@ public class LightsTests {
    @Test
    public void sphereAllLights() {
       scene1.geometries.add(sphere);
-      scene1.lights.add(new SpotLight(sphereLightColor, sphereLightPosition, new Vector(1, 1, -0.5))
+      scene1.lights.add(new SpotLight(sphereLightColor, sphereLightPosition,new Vector(1, 1, -0.5)) ///////////////////
               .setKl(0.001).setKq(0.0001));
       scene1.lights.add(new DirectionalLight(sphereLightColor, new Vector(1, 1, -0.5)));
-      scene1.lights.add(new PointLight(sphereLightColor, sphereLightPosition)
+      scene1.lights.add(new PointLight(sphereLightColor, sphereLightPosition) ///////////////
               .setKl(0.001).setKq(0.0002));
 
       ImageWriter imageWriter = new ImageWriter("allLightsSphere", 500, 500);
@@ -192,10 +195,10 @@ public class LightsTests {
    @Test
    public void trianglesAllaLights() {
       scene2.geometries.add(triangle1, triangle2);
-      scene2.lights.add(new SpotLight(trianglesLightColor, trianglesLightPosition, trianglesLightDirection)
+      scene2.lights.add(new SpotLight(trianglesLightColor, trianglesLightPosition,trianglesLightDirection) /////////////
               .setKl(0.001).setKq(0.0001));
       scene2.lights.add(new DirectionalLight(trianglesLightColor, trianglesLightDirection));
-      scene2.lights.add(new PointLight(trianglesLightColor, trianglesLightPosition)
+      scene2.lights.add(new PointLight(trianglesLightColor, trianglesLightPosition) ////////////////////
               .setKl(0.001).setKq(0.0002));
 
       ImageWriter imageWriter = new ImageWriter("allLightsTriangles", 500, 500);

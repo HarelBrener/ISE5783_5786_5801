@@ -5,7 +5,7 @@ import primitives.Point;
 import primitives.Vector;
 
 public class PointLight extends Light implements LightSource {
-    private Point position;
+    final private Point position;
 
     private double kC = 1;
 
@@ -13,7 +13,12 @@ public class PointLight extends Light implements LightSource {
 
     private double kQ = 0;
 
-    public PointLight(Color intensity, Point position) {
+    /**
+     * The radius of the light
+     */
+    //final private double radius;///////
+
+    public PointLight(Color intensity, Point position) { //////////////////
         super(intensity);
         this.position = position;
     }
