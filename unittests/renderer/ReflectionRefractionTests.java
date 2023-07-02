@@ -119,6 +119,16 @@ public class ReflectionRefractionTests {
         scene.setAmbientLight(new AmbientLight(new Color(123, 234, 23), 0.3));
 
         scene.geometries.add(//
+                /*new Triangle(new Point(2, -5, 0), new Point(-2, -5, 0), new Point(0, 5, 5)) //ice cream corn
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkT(0.4).setkR(0.6)).setEmission(new Color(16, 95, 28)),//
+                new Triangle(new Point(-2, 5, 0), new Point(-2, -5, 0), new Point(0, 5, 5)) //ice cream corn
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.4)).setEmission(new Color(186, 195, 128)),//
+                new Triangle(new Point(2, -5, 0), new Point(2, 5, 0), new Point(0, 5, 5)) //ice cream corn
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.4)).setEmission(new Color(186, 9, 2)), //
+                new Triangle(new Point(2, 5, 0), new Point(-2, 5, 0), new Point(0, 5, 5)) //ice cream corn
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkT(0.4)).setEmission(new Color(6, 95, 228)),//
+                new Sphere(5d, new Point(0, 0, 0)).setEmission(new Color(12, 2, 220)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.6)));*/
                 new Triangle(new Point(0, -3, 7), new Point(2, 5, 7), new Point(-2, 5, 7)) //ice cream corn
                         .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkT(0.4)).setEmission(new Color(186, 95, 28)), //
                 new Sphere(1.5d, new Point(0.5, 5.5, 0)).setEmission(new Color(245, 230, 220)) //ice cream
@@ -159,7 +169,7 @@ public class ReflectionRefractionTests {
                         .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.2)).setEmission(new Color(255, 0, 0)));
 
 
-                scene.lights.add(new SpotLight(new Color(300, 400, 400), new Point(10, -10, 7), new Vector(0, 0, -1)) //
+                scene.lights.add(new SpotLight(new Color(300, 400, 400), new Point(10, -10, 7),3d,10, new Vector(0, 0, -1)) //
                         .setKl(4E-5).setKq(2E-7));
 
         ImageWriter imageWriter = new ImageWriter("iceBall", 600, 600);

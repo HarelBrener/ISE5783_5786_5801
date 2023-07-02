@@ -132,7 +132,13 @@ public RayTracerBasic(Scene scene) {
             Vector l = lightSource.getL(gp.point);
             double nl = alignZero(n.dotProduct(l));
             if (nl * nv > 0) { // sign(nl) == sign(nv)
-                Double3 ktr = transparency(l, n, gp, lightSource);
+                Double3 ktr;
+                if(lightSource.getRadius() > 0) {
+                    ktr = avgT(l,n,lightSource,gp,lightSource.getRadius(),10);
+                }
+                else {
+                    ktr = transparency(l, n, gp, lightSource);
+                }
                 if (!(ktr.product(k).lowerThan(MIN_CALC_COLOR_K))) {
                     Color iL = lightSource.getIntensity(gp.point).scale(ktr);
                     color = color.add(iL.scale(calcDiffusive(material, nl)),

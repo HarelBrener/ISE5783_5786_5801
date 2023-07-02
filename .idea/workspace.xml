@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="26.6 morning" />
+    <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="26.6 morning">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/PointLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/PointLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/SpotLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/SpotLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unittests/renderer/ShadowTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ShadowTests.java" afterDir="false" />
+    </list>
     <list id="a76c10ed-df6a-46eb-b6f0-30fd3618b46b" name="Changes by admin" comment="" />
+    <list id="59e779d6-578a-4a0e-a651-63f942f5a68e" name="Changes by DELL" comment="">
+      <change beforePath="$PROJECT_DIR$/src/lighting/DirectionalLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/DirectionalLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/LightSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/LightSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lighting/PointLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/PointLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/primitives/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +33,9 @@
         <option value="JUnit5 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master1" />
   </component>
   <component name="Git.Rebase.Settings">
     <option name="NEW_BASE" value="origin/master1" />
@@ -43,6 +60,26 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/renderer/RayTracerBasic.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="7" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
+        <range start1="12" end1="12" start2="13" end2="14" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
+        <range start1="134" end1="135" start2="136" end2="143" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="224" end1="224" start2="232" end2="250" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/src/lighting/PointLight.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="3" end1="3" start2="4" end2="5" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="5" end1="5" start2="7" end2="11" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
+        <range start1="18" end1="19" start2="24" end2="30" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="25" end1="25" start2="36" end2="43" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="52" end1="52" start2="70" end2="76" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,7 +139,7 @@
       <recent name="geometries" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReflectionRefractionTests.fourObjects">
+  <component name="RunManager" selected="JUnit.ShadowTests">
     <configuration name="All in ISE5783_5876_5801" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5783_5876_5801" />
       <option name="PACKAGE_NAME" value="" />
@@ -141,21 +178,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ISE5783_5876_5801" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="primitives.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="primitives" />
-      <option name="MAIN_CLASS_NAME" value="primitives.RayTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReflectionRefractionTests.fourObjects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ISE5783_5876_5801" />
       <extension name="coverage">
@@ -172,13 +194,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShadowTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ISE5783_5876_5801" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="renderer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="renderer" />
+      <option name="MAIN_CLASS_NAME" value="renderer.ShadowTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ReflectionRefractionTests.fourObjects" />
+        <item itemvalue="JUnit.ShadowTests" />
         <item itemvalue="JUnit.All in ISE5783_5876_5801" />
+        <item itemvalue="JUnit.ReflectionRefractionTests.fourObjects" />
         <item itemvalue="JUnit.PolygonTest" />
         <item itemvalue="JUnit.GeometriesTest" />
-        <item itemvalue="JUnit.RayTest" />
       </list>
     </recent_temporary>
   </component>
@@ -366,7 +403,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1687783922217</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL‎-00026" summary="26.6 morning">
+      <created>1687784077880</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL‎-00026" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1687784077880</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -433,6 +477,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="26.6 morning" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/renderer/RayTracerBasic.java</url>
+          <line>245</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="rhs.d1" language="JAVA" />

@@ -7,9 +7,19 @@ import primitives.Vector;
 public class SpotLight extends PointLight{
     private Vector direction;
 
-    public SpotLight(Color intensity, Point position, Vector direction) { /////////////////
+    public SpotLight(Color intensity, Point position, Vector direction) {
         super(intensity, position);
-        this.direction = direction.normalize(); ////////////////
+        this.direction = direction.normalize();
+    }
+
+    public SpotLight(Color intensity, Point position, double r, double numOfRays, Vector direction) {
+        super(intensity, position, r, numOfRays);
+        this.direction = direction;
+    }
+
+    @Override
+    public double getRadius(){
+        return super.getRadius();
     }
 
     @Override

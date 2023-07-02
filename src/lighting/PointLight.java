@@ -1,6 +1,8 @@
 package lighting;
 
+import geometries.Intersectable;
 import primitives.Color;
+import primitives.Double3;
 import primitives.Point;
 import primitives.Vector;
 
@@ -16,11 +18,23 @@ public class PointLight extends Light implements LightSource {
     /**
      * The radius of the light
      */
-    //final private double radius;///////
+    private double radius = 0; /////////
+
+    /**
+     * The number of the rays in the beam ray
+     */
+    private double numOfRays = 0; /////////
 
     public PointLight(Color intensity, Point position) { //////////////////
         super(intensity);
         this.position = position;
+    }
+
+    public PointLight(Color intensity, Point position, double r, double numOfRays) { //////////////////
+        super(intensity);
+        this.position = position;
+        this.radius = r;
+        this.numOfRays = numOfRays;
     }
 
     public Color getIntensity(Point p){
