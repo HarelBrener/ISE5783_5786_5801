@@ -1,11 +1,17 @@
 package lighting;
 
+import geometries.Intersectable;
 import primitives.Color;
+import primitives.Double3;
 import primitives.Point;
 import primitives.Vector;
+import java.util.Random;
+
+
+//import java.beans.VetoableChangeListener;
 
 public class PointLight extends Light implements LightSource {
-    private Point position;
+    final private Point position;
 
     private double kC = 1;
 
@@ -13,9 +19,26 @@ public class PointLight extends Light implements LightSource {
 
     private double kQ = 0;
 
-    public PointLight(Color intensity, Point position) {
+    /**
+     * The radius of the light
+     */
+    private double radius = 0; /////////
+
+    /**
+     * The number of the rays in the beam ray
+     */
+    private double numOfRays = 0; /////////
+
+    public PointLight(Color intensity, Point position) { //////////////////
         super(intensity);
         this.position = position;
+    }
+
+    public PointLight(Color intensity, Point position, double r, double numOfRays) { //////////////////
+        super(intensity);
+        this.position = position;
+        this.radius = r;
+        this.numOfRays = numOfRays;
     }
 
     public Color getIntensity(Point p){
@@ -44,6 +67,12 @@ public class PointLight extends Light implements LightSource {
         this.kQ = kQ;
         return this;
     }
+
+    @Override
+    public double getRadius(){
+        return radius;
+    }
+
 
     @Override
     public double getDistance(Point point) {
