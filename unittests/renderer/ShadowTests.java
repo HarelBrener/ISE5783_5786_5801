@@ -27,7 +27,7 @@ public class ShadowTests {
    void sphereTriangleHelper(String pictName, Triangle triangle, Point spotLocation) {
       scene.geometries.add(sphere, triangle.setEmission(new Color(BLUE)).setMaterial(trMaterial));
       scene.lights.add( //
-                       new SpotLight(new Color(400, 240, 0), spotLocation,2,15, new Vector(1, 1, -3)) ////////////////////
+                       new SpotLight(new Color(400, 240, 0), spotLocation,10,70, new Vector(1, 1, -3)) ////////////////////
                           .setKl(1E-5).setKq(1.5E-7));
       camera.setImageWriter(new ImageWriter(pictName, 400, 400)) //
          .renderImage() //
@@ -96,8 +96,10 @@ public class ShadowTests {
                               .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(30)) //
       );
       scene.lights.add( //
-                       new SpotLight(new Color(700, 400, 400), new Point(40, 40, 115),1.5d,10, new Vector(-1, -1, -4)) ///////////////////
-                          .setKl(4E-4).setKq(2E-5));
+
+                       new SpotLight(new Color(700, 400, 400), new Point(40, 40, 115),1.5,300, new Vector(-1, -1, -4)) ///////////////////
+
+                               .setKl(4E-4).setKq(2E-5));
 
       camera.setImageWriter(new ImageWriter("shadowTrianglesSphere", 600, 600)) //
          .renderImage() //

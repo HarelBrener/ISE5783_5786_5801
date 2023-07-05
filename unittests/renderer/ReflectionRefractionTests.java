@@ -7,6 +7,8 @@ import static java.awt.Color.*;
 
 import geometries.Plane;
 import geometries.Polygon;
+import lighting.DirectionalLight;
+import lighting.PointLight;
 import org.junit.jupiter.api.Test;
 
 import geometries.Sphere;
@@ -116,9 +118,39 @@ public class ReflectionRefractionTests {
         Camera camera = new Camera(new Point(0, 0, 70), new Vector(0, 0, -1), new Vector(0, 1, 0)) //
                 .setVPSize(400, 400).setVPDistance(1000);
 
+        //Camera camera2 = new Camera(new Point(15, 0, 40), new Vector(0, 0, -1), new Vector(0, 1, 0)) //
+          //      .setVPSize(400, 400).setVPDistance(1000);
+
+        //Camera camera3 = new Camera(new Point(20, -10, 70), new Vector(0, 0, -1), new Vector(0, 1, 0)) //
+          //      .setVPSize(400, 400).setVPDistance(1000);
+
         scene.setAmbientLight(new AmbientLight(new Color(123, 234, 23), 0.3));
 
         scene.geometries.add(//
+                new Triangle(new Point(30, -30, -30), new Point(-30, 30, -30), new Point(-30, -30, -35))//base triangle down
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.6)).setEmission(new Color(34, 3, 123)),//
+                new Triangle(new Point(30, -30, -30), new Point(-30, 30, -30), new Point(30, 30, -35)) //base triangle up
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.6)).setEmission(new Color(1, 123, 12)),
+                new Sphere(11d, new Point(0, 0, -10)).setEmission(new Color(255, 120, 0)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)), //
+                new Sphere(3.5d, new Point(4, 4, 2)).setEmission(new Color(245, 230, 220)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
+                new Sphere(3.5d, new Point(-4, 4, 2)).setEmission(new Color(245, 230, 220)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
+                new Sphere(2d, new Point(0, 1.5, 5)).setEmission(new Color(160,160,160)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
+                new Triangle(new Point(-2, 1.5, 4), new Point(2, 1.5, 4), new Point(0, -3, 3)) //ice cream corn
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60)).setEmission(new Color(160,160,160)),
+                new Sphere(1.75d, new Point(-3.5, 3.5, 5)).setEmission(new Color(128,128,128)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.2)),
+                new Sphere(1.75d, new Point(4.5, 3.5, 5)).setEmission(new Color(128,128,128)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.2)),
+                new Sphere(1.75d, new Point(-3.5, 3.5, 5)).setEmission(new Color(BLACK)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.2)),
+                new Sphere(1.75d, new Point(5, 3.5, 5)).setEmission(new Color(BLACK)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.2))); //
+
+
                 /*new Triangle(new Point(2, -5, 0), new Point(-2, -5, 0), new Point(0, 5, 5)) //ice cream corn
                         .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkT(0.4).setkR(0.6)).setEmission(new Color(16, 95, 28)),//
                 new Triangle(new Point(-2, 5, 0), new Point(-2, -5, 0), new Point(0, 5, 5)) //ice cream corn
@@ -128,7 +160,7 @@ public class ReflectionRefractionTests {
                 new Triangle(new Point(2, 5, 0), new Point(-2, 5, 0), new Point(0, 5, 5)) //ice cream corn
                         .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkT(0.4)).setEmission(new Color(6, 95, 228)),//
                 new Sphere(5d, new Point(0, 0, 0)).setEmission(new Color(12, 2, 220)) //ice cream melted
-                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.6)));*/
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.6)));
                 new Triangle(new Point(0, -3, 7), new Point(2, 5, 7), new Point(-2, 5, 7)) //ice cream corn
                         .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkT(0.4)).setEmission(new Color(186, 95, 28)), //
                 new Sphere(1.5d, new Point(0.5, 5.5, 0)).setEmission(new Color(245, 230, 220)) //ice cream
@@ -166,16 +198,31 @@ public class ReflectionRefractionTests {
                 new Triangle(new Point(-5.5, -8.5, 5), new Point(-5.2, -8.5, 5), new Point(-5.25, -7.8, 5))//tot
                         .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.2)).setEmission(new Color(0, 50, 0)),
                 new Triangle(new Point(-7, -9, 5), new Point(-5, -9, 5), new Point(-5.55, -7.8, 5))//tot
-                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.2)).setEmission(new Color(255, 0, 0)));
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.2)).setEmission(new Color(255, 0, 0)));*/
 
 
-                scene.lights.add(new SpotLight(new Color(300, 400, 400), new Point(10, -10, 7),3d,10, new Vector(0, 0, -1)) //
+                scene.lights.add(new SpotLight(new Color(300, 400, 400), new Point(-20, 20, 17),3d,81, new Vector(0, 0, -1)) //
                         .setKl(4E-5).setKq(2E-7));
+                //scene.lights.add(new PointLight(new Color(300, 400, 400), new Point(-10, 10,253),1.5d,9)//
+                  //      .setKl(4E-5).setKq(2E-7));
+                //scene.lights.add(new DirectionalLight(new Color(30,40,40),new Vector(0,0,-1)));
 
-        ImageWriter imageWriter = new ImageWriter("iceBall", 600, 600);
-        camera.setImageWriter(imageWriter) //
+        ImageWriter imageWriter1 = new ImageWriter("iceBall1", 400, 400);
+        camera1.setImageWriter(imageWriter1) //
                 .setRayTracer(new RayTracerBasic(scene)) //
                 .renderImage() //
                 .writeToImage();
+
+        /*ImageWriter imageWriter2 = new ImageWriter("iceBall2", 400, 400);
+        camera2.setImageWriter(imageWriter2) //
+                .setRayTracer(new RayTracerBasic(scene)) //
+                .renderImage() //
+                .writeToImage();*/
+
+        /*ImageWriter imageWriter3 = new ImageWriter("iceBall3", 400, 400);
+        camera3.setImageWriter(imageWriter3) //
+                .setRayTracer(new RayTracerBasic(scene)) //
+                .renderImage() //
+                .writeToImage();*/
     }
 }

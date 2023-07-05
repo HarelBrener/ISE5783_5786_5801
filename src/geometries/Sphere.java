@@ -84,18 +84,57 @@ public class Sphere extends RadialGeometry {
         double t1 = alignZero(tm - th);
         double t2 = alignZero(tm + th);
         Point p1, p2;
-        if (t1 <= 0 && t2 <= 0)
-            return null;
-        else if (t1 > 0 && t2 <= 0) {
-            p1 = ray.getP0().add(ray.getDir().scale(t1));
-            return List.of(new GeoPoint(this, p1));
-        } else if (t1 <= 0 && t2 > 0) {
-            p2 = ray.getP0().add(ray.getDir().scale(t2));
-            return List.of(new GeoPoint(this, p2));
-        } else {
-            p1 = ray.getP0().add(ray.getDir().scale(t1));
-            p2 = ray.getP0().add(ray.getDir().scale(t2));
-            return List.of(new GeoPoint(this, p1), new GeoPoint(this, p2));
-        }
+        try {
+            if (t1 > 0) {
+                p1 = ray.getP0().add(ray.getDir().scale(t1));
+                if (t2 > 0) {
+                    p2 = ray.getP0().add(ray.getDir().scale(t2));
+                    return List.of(new GeoPoint(this, p1), new GeoPoint(this, p2));
+                }
+                return List.of(new GeoPoint(this, p1));
+            }
+            if (t2 > 0) {
+                p2 = ray.getP0().add(ray.getDir().scale(t2));
+                return List.of(new GeoPoint(this, p2));
+            }
+        }catch (Exception e){}
+        return null;
     }
+
+
+    /*@Override
+    public List<GeoPoint> findGeoIntersectionsHelper(Ray ray) {
+        //double t = 0;
+        //Point p = ray.getP0().add(ray.getDir().scale(t));
+        if (this.center.equals(ray.getP0())) { // if the p0 point of the ray is the center point of the sphere
+            Point p = ray.getP0().add(ray.getDir().scale(this.radius));
+            return List.of(new GeoPoint(this, p));
+        } else {
+            Vector u = this.center.subtract(ray.getP0());
+            double tm = ray.getDir().dotProduct(u);
+            double d = Math.sqrt(u.lengthSquared() - tm * tm);
+            if (d >= this.radius)
+                return null;
+            else {
+                double th = Math.sqrt((this.radius * this.radius) - (d * d));
+                double t1 = alignZero(tm - th);
+                double t2 = alignZero(tm + th);
+                Point p1, p2;
+                if (t1 <= 0 && t2 <= 0)
+                    return null;
+                else if (t1 > 0 && t2 <= 0) {
+                    p1 = ray.getP0().add(ray.getDir().scale(t1));
+
+                    return List.of(new GeoPoint(this, p1));
+                } else if (t1 <= 0 && t2 > 0) {
+                    p2 = ray.getP0().add(ray.getDir().scale(t2));
+                    return List.of(new GeoPoint(this, p2));
+                } else {
+                    p1 = ray.getP0().add(ray.getDir().scale(t1));
+                    p2 = ray.getP0().add(ray.getDir().scale(t2));
+                    return List.of(new GeoPoint(this, p1), new GeoPoint(this, p2));
+                }
+            }
+        }
+    }*/
 }

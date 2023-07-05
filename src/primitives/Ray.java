@@ -92,4 +92,27 @@ public class Ray {
         }
         return minDP;
     }
+
+    /**
+     * the Function is produce many rays on the light
+     *
+     * @param numOfRays sqrt of the num of the rays we want to produce
+     * @param lenght the lenght of the light
+     * @param center the center point of the light
+     * @return 2D array with all tha rays
+     */
+    public Ray[][] getRayes(int numOfRays, double lenght, Point center){
+        Vector to = this.getDir();
+        Ray[][] ret=new Ray[numOfRays][numOfRays];
+        Vector vRight = new Vector(to.getY()*-1,to.getX(),0).normalize().scale(lenght/(numOfRays-1));
+        Vector vUp = to.crossProduct(vRight).normalize().scale(lenght/(numOfRays-1));
+        Point pi=center.add(vUp.scale(-(numOfRays-1)/2)).add(vRight.scale(-(numOfRays-1)/2));
+        for(int i=0;i<numOfRays;i++,pi=pi.add(vUp)){
+            Point pj=pi;
+            for(int j=0;j<numOfRays;j++,pj=pj.add(vRight)){
+                ret[i][j]=new Ray(this.getP0(),this.getP0().subtract(pj));
+            }
+        }
+        return ret;
+    }
 }

@@ -12,14 +12,9 @@ public class SpotLight extends PointLight{
         this.direction = direction.normalize();
     }
 
-    public SpotLight(Color intensity, Point position, double r, double numOfRays, Vector direction) {
-        super(intensity, position, r, numOfRays);
-        this.direction = direction;
-    }
-
-    @Override
-    public double getRadius(){
-        return super.getRadius();
+    public SpotLight(Color intensity, Point position,double lenght/*double r*/, double numOfRays, Vector direction) {
+        super(intensity, position, lenght/*r*/, numOfRays);
+        this.direction = direction.normalize();
     }
 
     @Override

@@ -18,23 +18,26 @@ public class PointLight extends Light implements LightSource {
     /**
      * The radius of the light
      */
-    private double radius = 0; /////////
+   // private double radius = 0; /////////
+    private  double lenght = 0;
+    //private  double widght = 0;
 
     /**
      * The number of the rays in the beam ray
      */
-    private double numOfRays = 0; /////////
+    private int numOfRays = 0; /////////
 
     public PointLight(Color intensity, Point position) { //////////////////
         super(intensity);
         this.position = position;
     }
 
-    public PointLight(Color intensity, Point position, double r, double numOfRays) { //////////////////
+    public PointLight(Color intensity, Point position, double lenght/*double r*/, double numOfRays) { //////////////////
         super(intensity);
         this.position = position;
-        this.radius = r;
-        this.numOfRays = numOfRays;
+        this.lenght = lenght;
+        //this.radius = r;
+        this.numOfRays = (int)Math.sqrt(numOfRays);
     }
 
     public Color getIntensity(Point p){
@@ -58,7 +61,9 @@ public class PointLight extends Light implements LightSource {
         this.kL = kL;
         return this;
     }
-
+    public Point getCenter(){
+        return this.position;
+    }
     public PointLight setKq(double kQ) {
         this.kQ = kQ;
         return this;

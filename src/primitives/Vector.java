@@ -17,6 +17,7 @@ public class Vector extends Point {
     Vector(Double3 p) {
         super(p);
         if (xyz.equals(p.ZERO)) {
+
             throw new IllegalArgumentException("The vector is the zero vector");
         }
     }

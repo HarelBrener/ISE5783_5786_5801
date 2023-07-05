@@ -5,6 +5,7 @@
  */
 package renderer;
 import lighting.LightSource;
+import lighting.PointLight;
 import primitives.*;
 import scene.Scene;
 import geometries.Intersectable.GeoPoint;
@@ -133,8 +134,8 @@ public RayTracerBasic(Scene scene) {
             double nl = alignZero(n.dotProduct(l));
             if (nl * nv > 0) { // sign(nl) == sign(nv)
                 Double3 ktr;
-                if(lightSource.getRadius() > 0) {
-                    ktr = avgT(l,n,lightSource,gp,lightSource.getRadius(),10);
+                 if(lightSource.getLenght() > 0 && lightSource instanceof PointLight) {
+                    ktr = avgT(l,n,(PointLight) lightSource,gp);
                 }
                 else {
                     ktr = transparency(l, n, gp, lightSource);
