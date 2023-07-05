@@ -1,0 +1,40 @@
+package lighting;
+
+import primitives.Color;
+import primitives.Point;
+import primitives.Vector;
+
+public class SpotLight extends PointLight{
+    private Vector direction;
+
+    public SpotLight(Color intensity, Point position, Vector direction) {
+        super(intensity, position);
+        this.direction = direction.normalize();
+    }
+
+    public SpotLight(Color intensity, Point position, double r, double numOfRays, Vector direction) {
+        super(intensity, position, r, numOfRays);
+        this.direction = direction;
+    }
+
+    @Override
+    public double getRadius(){
+        return super.getRadius();
+    }
+
+    @Override
+    public Color getIntensity(Point p){
+        double max = Math.max(0, getL(p).dotProduct(this.direction));
+        return super.getIntensity(p).scale(max);
+    }
+
+    @Override
+    public Vector getL(Point p) {
+        return super.getL(p);
+    }
+
+    @Override
+    public double getDistance(Point point) {
+        return super.getDistance(point);
+    }
+}
