@@ -128,15 +128,19 @@ public class ReflectionRefractionTests {
 
         scene.geometries.add(//
                 new Triangle(new Point(30, -30, -30), new Point(-30, 30, -30), new Point(-30, -30, -35))//base triangle down
-                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.6)).setEmission(new Color(34, 3, 123)),//
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(1).setkT(1)).setEmission(new Color(34, 3, 123)),//
                 new Triangle(new Point(30, -30, -30), new Point(-30, 30, -30), new Point(30, 30, -35)) //base triangle up
-                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.6)).setEmission(new Color(1, 123, 12)),
-                new Sphere(11d, new Point(0, 0, -10)).setEmission(new Color(255, 120, 0)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(1).setkT(1)).setEmission(new Color(1, 123, 12)),
+                new Triangle(new Point(30, -30, 90), new Point(-30, 30, 90), new Point(-30, -30, 90))//base triangle down
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(1).setkT(1)).setEmission(new Color(192,192,192)),//
+                new Triangle(new Point(30, -30, 90), new Point(-30, 30, 90), new Point(30, 30, 90)) //base triangle up
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(1).setkT(1)).setEmission(new Color(192,192,192)),
+                new Sphere(11d, new Point(0, 0, -10)).setEmission(new Color(255, 20, 0)) //ice cream melted
                         .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)), //
                 new Sphere(3.5d, new Point(4, 4, 2)).setEmission(new Color(245, 230, 220)) //ice cream melted
-                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkR(0.5)),
                 new Sphere(3.5d, new Point(-4, 4, 2)).setEmission(new Color(245, 230, 220)) //ice cream melted
-                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkR(0.5)),
                 new Sphere(2d, new Point(0, 1.5, 5)).setEmission(new Color(160,160,160)) //ice cream melted
                         .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
                 new Triangle(new Point(-2, 1.5, 4), new Point(2, 1.5, 4), new Point(0, -3, 3)) //ice cream corn
@@ -145,10 +149,22 @@ public class ReflectionRefractionTests {
                         .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.2)),
                 new Sphere(1.75d, new Point(4.5, 3.5, 5)).setEmission(new Color(128,128,128)) //ice cream melted
                         .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.2)),
-                new Sphere(1.75d, new Point(-3.5, 3.5, 5)).setEmission(new Color(BLACK)) //ice cream melted
-                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.2)),
-                new Sphere(1.75d, new Point(5, 3.5, 5)).setEmission(new Color(BLACK)) //ice cream melted
-                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.2))); //
+                new Sphere(1d, new Point(-3.5, 3.5, 5)).setEmission(new Color(BLACK)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
+                new Sphere(1d, new Point(4.5, 3.5, 5)).setEmission(new Color(BLACK)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
+                new Sphere(0.3d, new Point(-3.55, 3.55, 7)).setEmission(new Color(220,220,220)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
+                new Sphere(0.3d, new Point(4.42, 3.55, 7)).setEmission(new Color(220,220,220)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30)),
+                new Triangle(new Point(10, 16, -11), new Point(8, 6, -11), new Point(3.5, 6, -11)) //ice cream corn
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60)).setEmission(new Color(255, 20, 0)),
+                new Triangle(new Point(-10, 16, -11), new Point(-8, 6, -11), new Point(-3.5,6, -11)) //ice cream corn
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60)).setEmission(new Color(255, 20, 0)),
+                new Triangle(new Point(0, -30, -11), new Point(-10, -4, -11), new Point(10,-4, -11)) //ice cream corn
+                        .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60)).setEmission(new Color(255, 20, 0)),
+                new Sphere(12d, new Point(0, 0, 20)).setEmission(new Color(12,223,2)) //ice cream melted
+                        .setMaterial(new Material().setKd(0.2).setKs(0.2).setShininess(30).setkT(0.9))); //
 
 
                 /*new Triangle(new Point(2, -5, 0), new Point(-2, -5, 0), new Point(0, 5, 5)) //ice cream corn
@@ -201,7 +217,7 @@ public class ReflectionRefractionTests {
                         .setMaterial(new Material().setKd(0.5).setKs(0.5).setShininess(60).setkR(0.2)).setEmission(new Color(255, 0, 0)));*/
 
 
-                scene.lights.add(new SpotLight(new Color(300, 400, 400), new Point(-20, 20, 17),3d,81, new Vector(0, 0, -1)) //
+                scene.lights.add(new SpotLight(new Color(250, 250, 250), new Point(-20, 20, 17),3d,81, new Vector(0, 0, -1)) //
                         .setKl(4E-5).setKq(2E-7));
                 //scene.lights.add(new PointLight(new Color(300, 400, 400), new Point(-10, 10,253),1.5d,9)//
                   //      .setKl(4E-5).setKq(2E-7));

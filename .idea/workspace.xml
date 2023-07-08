@@ -5,37 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8baa653-e229-48bb-8b0f-f0299ccefa0d" name="Changes" comment="5.7">
-      <change afterPath="$PROJECT_DIR$/hs_err_pid10312.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid14588.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid14736.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid16092.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid21020.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid22288.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid22984.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid24476.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid4972.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid7616.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hs_err_pid9428.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid10312.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid14588.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid14736.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid16092.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid21020.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid22288.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid22984.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid24476.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid4972.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid7616.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/replay_pid9428.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/geometries/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/geometries/Sphere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lighting/PointLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/PointLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lighting/SpotLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lighting/SpotLight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Ray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Ray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/primitives/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/primitives/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/RayTracerBasic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unittests/renderer/ShadowTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/unittests/renderer/ShadowTests.java" afterDir="false" />
     </list>
     <list id="a76c10ed-df6a-46eb-b6f0-30fd3618b46b" name="Changes by admin" comment="" />
     <list id="59e779d6-578a-4a0e-a651-63f942f5a68e" name="Changes by DELL" comment="">
@@ -89,46 +60,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/unittests/renderer/ShadowTests.java">
-      <ranges>
-        <range start1="29" end1="30" start2="29" end2="30" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="98" end1="100" start2="98" end2="102" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="105" end1="106" start2="107" end2="107" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
-        <range start1="107" end1="108" start2="108" end2="108" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/unittests/renderer/ReflectionRefractionTests.java">
       <ranges>
-        <range start1="9" end1="9" start2="9" end2="11" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="114" end1="116" start2="116" end2="118" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
-        <range start1="117" end1="117" start2="119" end2="125" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="121" end1="121" start2="129" end2="153" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="130" end1="131" start2="162" end2="163" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="168" end1="169" start2="200" end2="201" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="171" end1="172" start2="203" end2="204" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="173" end1="173" start2="205" end2="208" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="174" end1="176" start2="209" end2="211" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="179" end1="179" start2="214" end2="226" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/renderer/RayTracerBasic.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="7" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
-        <range start1="7" end1="7" start2="8" end2="9" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="12" end1="12" start2="14" end2="15" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
-        <range start1="135" end1="137" start2="138" end2="140" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="230" end1="230" start2="233" end2="261" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/lighting/PointLight.java">
-      <ranges>
-        <range start1="7" end1="7" start2="7" end2="11" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
-        <range start1="20" end1="21" start2="24" end2="27" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="25" end1="26" start2="31" end2="32" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="32" end1="33" start2="38" end2="39" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="35" end1="37" start2="41" end2="44" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="60" end1="61" start2="67" end2="70" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
-        <range start1="66" end1="66" start2="75" end2="91" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
+        <range start1="116" end1="118" start2="116" end2="118" changelist="59e779d6-578a-4a0e-a651-63f942f5a68e" />
+        <range start1="130" end1="131" start2="130" end2="131" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="132" end1="134" start2="132" end2="138" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="136" end1="137" start2="140" end2="141" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="138" end1="139" start2="142" end2="143" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="147" end1="151" start2="151" end2="167" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
+        <range start1="203" end1="204" start2="219" end2="220" changelist="f8baa653-e229-48bb-8b0f-f0299ccefa0d" />
       </ranges>
     </file>
   </component>
@@ -146,25 +86,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
-    "last_opened_file_path": "C:/Users/DELL/Documents/ISE5783_5786_5801/unittests/lighting",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "CodeWithMe"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Documents/ISE5783_5786_5801/unittests/lighting&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\Documents\ISE5783_5786_5801\unittests\lighting" />
@@ -480,7 +420,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1688302813616</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL‎-00028" summary="5.7">
+      <created>1688546574271</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL‎-00028" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1688546574271</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
