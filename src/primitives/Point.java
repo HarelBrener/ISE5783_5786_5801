@@ -1,6 +1,10 @@
 package primitives;
 
+import geometries.Intersectable;
+import lighting.LightSource;
+
 import java.util.Objects;
+import java.util.Random;
 
 /**
  * Represents a point in a 3D space by three coordinates.
@@ -109,4 +113,15 @@ public class Point {
         if (!(o instanceof Point point)) return false;
         return this.xyz.equals(((Point) o).xyz);
     }
+
+    /*public Point randomPoint(Vector l,double lenght, double widght /*double r){
+        Vector vRight = new Vector(l.getY()*-1,l.getX(),0).normalize();
+        Vector vUp = l.crossProduct(vRight).normalize();
+        Random rand = new Random();
+        double k,t; // k -- vUp, t -- vRight
+        k = rand.nextDouble(-r,r);
+        double bound = Math.sqrt(r*r-k*k);
+        t = rand.nextDouble( -bound ,bound);
+        return this.add(vRight.scale(k)).add(vUp.scale(t));
+    }*/
 }

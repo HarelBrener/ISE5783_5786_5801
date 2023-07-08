@@ -4,6 +4,7 @@
  This class extends the RayTracerBase class.
  */
 package renderer;
+import geometries.Intersectable;
 import lighting.LightSource;
 import lighting.PointLight;
 import primitives.*;
@@ -11,6 +12,7 @@ import scene.Scene;
 import geometries.Intersectable.GeoPoint;
 
 import java.lang.reflect.Member;
+import java.nio.DoubleBuffer;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -229,4 +231,32 @@ public RayTracerBasic(Scene scene) {
     private GeoPoint findClosestIntersection(Ray ray) {
         return ray.findClosestGeoPoint(this.scene.geometries.findGeoIntersections(ray));
     }
+
+    public Double3 avgT(Vector l, Vector n, PointLight lightSource, Intersectable.GeoPoint gp){
+        Double3 k;
+        Double3 sum = Double3.ZERO;
+        Ray[][] rays =  new Ray(gp.point,l).getRayes(lightSource.getNumOfRays(),lightSource.getLenght(),lightSource.getCenter());
+        for(int i = 0; i < lightSource.getNumOfRays(); i++){
+           for(int j=0;j<lightSource.getNumOfRays();j++){
+               k = transparency(rays[i][j].getDir(), n, gp, lightSource);
+               sum = sum.add(k);
+           }
+        }
+        return sum.reduce(lightSource.getNumOfRays()*lightSource.getNumOfRays());
+    }
+
+
+    /*public Double3 avgT(Vector l, Vector n, PointLight lightSource, Intersectable.GeoPoint gp){
+        Vector v;
+        Point p;
+        Double3 k;
+        Double3 sum = Double3.ZERO;
+        for(int i = 0; i < lightSource.getNumOfRays(); i++){
+            p = lightSource.getCenter().randomPoint(l,lightSource.getRadius());
+            v = gp.point.subtract(p);
+            k = transparency(v, n, gp, lightSource);
+            sum = sum.add(k);
+        }
+        return sum.reduce(lightSource.getNumOfRays());
+    }*/
 }

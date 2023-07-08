@@ -5,6 +5,10 @@ import primitives.Color;
 import primitives.Double3;
 import primitives.Point;
 import primitives.Vector;
+import java.util.Random;
+
+
+//import java.beans.VetoableChangeListener;
 
 public class PointLight extends Light implements LightSource {
     final private Point position;
@@ -68,6 +72,22 @@ public class PointLight extends Light implements LightSource {
         this.kQ = kQ;
         return this;
     }
+
+    /*@Override
+    public double getRadius(){
+        return radius;
+    }*/
+
+    @Override
+    public double getLenght() {
+        return lenght;
+    }
+
+    @Override
+    public int getNumOfRays() {
+        return numOfRays;
+    }
+
 
     @Override
     public double getDistance(Point point) {

@@ -4,7 +4,7 @@ import primitives.Color;
 import primitives.Point;
 import primitives.Vector;
 
-class DirectionalLight extends Light implements LightSource{
+public class DirectionalLight extends Light implements LightSource{
     private Vector direction;
 
     public DirectionalLight(Color intensity, Vector direction) {
@@ -22,5 +22,20 @@ class DirectionalLight extends Light implements LightSource{
     @Override
     public double getDistance(Point point) {
         return Double.POSITIVE_INFINITY;
+    }
+
+    //@Override
+    //public double getRadius(){
+        //return 0;
+    //}
+
+    @Override
+    public double getLenght() {
+        return 0;
+    }
+
+    @Override
+    public int getNumOfRays() {
+        return 0;
     }
 }

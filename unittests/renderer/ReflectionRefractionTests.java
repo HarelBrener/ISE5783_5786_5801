@@ -114,8 +114,8 @@ public class ReflectionRefractionTests {
     }
 
     @Test
-    public void fourObjects() {
-        Camera camera = new Camera(new Point(0, 0, 70), new Vector(0, 0, -1), new Vector(0, 1, 0)) //
+    public void photoWithObjects() {
+        Camera camera1 = new Camera(new Point(0, 0, 70), new Vector(0, 0, -1), new Vector(0, 1, 0)) //
                 .setVPSize(400, 400).setVPDistance(1000);
 
         //Camera camera2 = new Camera(new Point(15, 0, 40), new Vector(0, 0, -1), new Vector(0, 1, 0)) //
